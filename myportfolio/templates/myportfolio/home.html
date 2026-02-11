@@ -1,0 +1,47 @@
+{% extends 'myportfolio/base.html' %}
+{% load static %}
+{% block content %}
+
+<section class="hero">
+    <div id="particles-js"></div>
+
+    <div class="hero-content">
+        <h1>Hi, I'm <span class="gradient">Anuj Paudel</span></h1>
+        <h2 class="typing"></h2>
+        <p>AI Backend • FastAPI • Automation • Document Intelligence</p>
+
+        <div class="hero-buttons">
+            <a href="{% url 'about' %}" class="btn">Explore</a>
+            <a href="{% url 'contact' %}" class="btn-outline">Contact</a>
+        </div>
+    </div>
+</section>
+
+<section class="projects">
+    <h2 class="section-title">Pinned Projects</h2>
+
+    <div class="project-grid">
+        {% for repo in repos %}
+            {% if repo.name == "docu-mind" or repo.name == "Mamacita" or repo.name == "userexp" or repo.name == "security" %}
+                <div class="project-card">
+                    <h3>{{ repo.name }}</h3>
+                    <p>{{ repo.description }}</p>
+                    <div class="repo-meta">
+                        ⭐ {{ repo.stargazers_count }} |
+                        🍴 {{ repo.forks_count }}
+                    </div>
+                    <a href="{{ repo.html_url }}" target="_blank">View Repo →</a>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</section>
+
+<section class="github-stats">
+    <h2 class="section-title">GitHub Stats</h2>
+    <div class="stats-card">
+        <img src="https://github-readme-stats.vercel.app/api?username=pa-nuzz&show_icons=true&theme=tokyonight">
+    </div>
+</section>
+
+{% endblock %}

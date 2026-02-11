@@ -1,0 +1,29 @@
+{% extends 'myportfolio/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<section class="about">
+    <div class="about-container">
+        <img src="{% static 'images/profile.jpg' %}" class="profile-img">
+
+        <div class="about-text">
+            <h2>About Me</h2>
+            <p>
+                I design AI-assisted backend systems, automation tools,
+                and high-performance APIs using FastAPI & Django.
+            </p>
+
+            <div class="tech-stack">
+                <span>Python</span>
+                <span>FastAPI</span>
+                <span>Django</span>
+                <span>GitHub Actions</span>
+                <span>AI/ML</span>
+                <span>Automation</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
