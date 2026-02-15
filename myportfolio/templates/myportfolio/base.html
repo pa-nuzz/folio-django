@@ -1,0 +1,104 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anuj Paudel | Portfolio</title>
+    <link rel="stylesheet" href="{% static 'myportfolio/css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- HERO -->
+    <section id="home">
+        <div class="hero-content reveal">
+            <span style="color: var(--accent); font-weight: 700; letter-spacing: 3px; text-transform: uppercase; font-size: 12px;">Python & AI Engineer</span>
+            <h1>ANUJ<br>PAUDEL.</h1>
+            <p>Engineering high-performance backend systems and intelligent automation with a minimalistic approach.</p>
+        </div>
+    </section>
+
+    <!-- ABOUT & SKILLS -->
+    <section id="about">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;" class="reveal">
+            <div>
+                <h2 style="font-size: 60px; letter-spacing: -3px; margin-bottom: 30px;">The Story.</h2>
+                <p style="color: var(--text-dim); font-size: 20px; line-height: 1.6;">
+                    I specialize in Python-driven architectures. From FastAPI microservices to complex AI integrations,
+                    I focus on building tools that are as efficient as they are elegant.
+                </p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-item"><i class="fab fa-python"></i><span>Python</span></div>
+                <div class="skill-item"><i class="fas fa-bolt"></i><span>FastAPI</span></div>
+                <div class="skill-item"><i class="fas fa-code"></i><span>Django</span></div>
+                <div class="skill-item"><i class="fas fa-robot"></i><span>AI / ML</span></div>
+                <div class="skill-item"><i class="fab fa-figma"></i><span>Figma</span></div>
+                <div class="skill-item"><i class="fab fa-github"></i><span>Actions</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+        <h2 class="reveal" style="font-size: 60px; letter-spacing: -3px; margin-bottom: 50px;">Works.</h2>
+
+        <div class="project-grid">
+            <!-- Admin Projects -->
+            {% for project in admin_projects %}
+            <a href="{{ project.link }}" target="_blank" class="project-card reveal">
+                <img src="{{ project.image.url }}" class="card-img" alt="{{ project.title }}">
+                <div class="card-body">
+                    <h3>{{ project.title }}</h3>
+                    <p>{{ project.description|truncatechars:120 }}</p>
+                    <span style="color: var(--accent); font-weight: 700; font-size: 12px;">VIEW CASE STUDY →</span>
+                </div>
+            </a>
+            {% endfor %}
+
+            <!-- GitHub Projects -->
+            {% for repo in github_repos %}
+            <a href="{{ repo.html_url }}" target="_blank" class="project-card reveal">
+                <img src="https://opengraph.githubassets.com/1/{{ github_username }}/{{ repo.name }}" class="card-img" alt="{{ repo.name }}">
+                <div class="card-body">
+                    <div style="color: var(--accent); font-size: 10px; font-weight: 800; margin-bottom: 5px;">GITHUB REPO</div>
+                    <h3>{{ repo.name }}</h3>
+                    <p>{{ repo.description|default:"No description provided." }}</p>
+                    <div style="display: flex; gap: 15px; color: var(--text-dim); font-size: 12px;">
+                        <span><i class="fas fa-star"></i> {{ repo.stargazers_count }}</span>
+                        <span><i class="fas fa-circle"></i> {{ repo.language }}</span>
+                    </div>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+
+        <div class="stats-container reveal">
+            <h3 style="margin-bottom: 30px; font-size: 14px; text-transform: uppercase; letter-spacing: 3px; color: var(--text-dim);">Contribution Activity</h3>
+            <img src="https://ghchart.rshah.org/{{ github_username }}" alt="GitHub Chart">
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <div class="contact-box reveal">
+            <h2 style="font-size: clamp(40px, 8vw, 100px); letter-spacing: -5px; line-height: 0.9;">LET'S BUILD<br>THE FUTURE.</h2>
+            <a href="mailto:anuj.paudel061@gmail.com" class="btn-accent">GET IN TOUCH</a>
+            <div style="margin-top: 40px; display: flex; justify-content: center; gap: 40px;">
+                <a href="https://github.com/{{ github_username }}" target="_blank" style="color: var(--text-dim); font-size: 24px;"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/anuj-paudel-a7a88223b/" target="_blank" style="color: var(--text-dim); font-size: 24px;"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <script src="{% static 'myportfolio/js/main.js' %}"></script>
+</body>
+</html>
