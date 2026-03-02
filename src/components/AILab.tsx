@@ -40,7 +40,7 @@ export default function AILab() {
   const [messages, setMessages] = useState<Message[]>([
     { 
       role: 'ai', 
-      content: "👋 Hi! I'm Monk, Anuj's AI assistant. I can help you learn about his work, analyze resumes, or extract text from images. What would you like to explore?" 
+      content: "Well, well, well... look who decided to stop by! I'm Monk, your charming AI guide to Anuj's world. 💫 Ask me anything about this talented developer - or just say hi. I'm all ears (and code)!" 
     }
   ]);
   const [input, setInput] = useState('');

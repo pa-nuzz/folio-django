@@ -2223,24 +2223,53 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
 "[project]/folio-frontend/src/components/MusicSection.module.css [app-client] (css module)", ((__turbopack_context__) => {
 
 __turbopack_context__.v({
-  "appleEmbed": "MusicSection-module__z1KbBG__appleEmbed",
+  "appleIcon": "MusicSection-module__z1KbBG__appleIcon",
+  "appleLink": "MusicSection-module__z1KbBG__appleLink",
+  "appleTheme": "MusicSection-module__z1KbBG__appleTheme",
+  "artistCard": "MusicSection-module__z1KbBG__artistCard",
+  "artistGenre": "MusicSection-module__z1KbBG__artistGenre",
+  "artistImage": "MusicSection-module__z1KbBG__artistImage",
+  "artistImageWrapper": "MusicSection-module__z1KbBG__artistImageWrapper",
+  "artistInfo": "MusicSection-module__z1KbBG__artistInfo",
+  "artistName": "MusicSection-module__z1KbBG__artistName",
+  "artistOverlay": "MusicSection-module__z1KbBG__artistOverlay",
+  "artistStats": "MusicSection-module__z1KbBG__artistStats",
+  "artistsGrid": "MusicSection-module__z1KbBG__artistsGrid",
+  "backgroundGlow": "MusicSection-module__z1KbBG__backgroundGlow",
   "badge": "MusicSection-module__z1KbBG__badge",
   "container": "MusicSection-module__z1KbBG__container",
+  "dot": "MusicSection-module__z1KbBG__dot",
   "embedContainer": "MusicSection-module__z1KbBG__embedContainer",
+  "equalizer": "MusicSection-module__z1KbBG__equalizer",
   "header": "MusicSection-module__z1KbBG__header",
-  "linkBtn": "MusicSection-module__z1KbBG__linkBtn",
-  "linksRow": "MusicSection-module__z1KbBG__linksRow",
+  "platformCard": "MusicSection-module__z1KbBG__platformCard",
+  "platformHeader": "MusicSection-module__z1KbBG__platformHeader",
+  "platformIcon": "MusicSection-module__z1KbBG__platformIcon",
+  "platformInfo": "MusicSection-module__z1KbBG__platformInfo",
+  "platformLink": "MusicSection-module__z1KbBG__platformLink",
+  "platformName": "MusicSection-module__z1KbBG__platformName",
+  "platformStatus": "MusicSection-module__z1KbBG__platformStatus",
+  "platformSubtitle": "MusicSection-module__z1KbBG__platformSubtitle",
+  "playButton": "MusicSection-module__z1KbBG__playButton",
+  "playlistArtwork": "MusicSection-module__z1KbBG__playlistArtwork",
+  "playlistCard": "MusicSection-module__z1KbBG__playlistCard",
+  "playlistIcon": "MusicSection-module__z1KbBG__playlistIcon",
+  "playlistInfo": "MusicSection-module__z1KbBG__playlistInfo",
+  "playlistMeta": "MusicSection-module__z1KbBG__playlistMeta",
+  "playlistName": "MusicSection-module__z1KbBG__playlistName",
+  "playlistPlay": "MusicSection-module__z1KbBG__playlistPlay",
+  "playlistsGrid": "MusicSection-module__z1KbBG__playlistsGrid",
   "pulse": "MusicSection-module__z1KbBG__pulse",
   "section": "MusicSection-module__z1KbBG__section",
+  "sparkle": "MusicSection-module__z1KbBG__sparkle",
   "spin": "MusicSection-module__z1KbBG__spin",
   "spinning": "MusicSection-module__z1KbBG__spinning",
-  "spotifyEmbed": "MusicSection-module__z1KbBG__spotifyEmbed",
-  "statusRow": "MusicSection-module__z1KbBG__statusRow",
+  "spotifyLink": "MusicSection-module__z1KbBG__spotifyLink",
+  "spotifyTheme": "MusicSection-module__z1KbBG__spotifyTheme",
+  "statusBar": "MusicSection-module__z1KbBG__statusBar",
+  "statusDivider": "MusicSection-module__z1KbBG__statusDivider",
+  "statusItem": "MusicSection-module__z1KbBG__statusItem",
   "subtitle": "MusicSection-module__z1KbBG__subtitle",
-  "tab": "MusicSection-module__z1KbBG__tab",
-  "tabActive": "MusicSection-module__z1KbBG__tabActive",
-  "tabContainer": "MusicSection-module__z1KbBG__tabContainer",
-  "tabIcon": "MusicSection-module__z1KbBG__tabIcon",
   "title": "MusicSection-module__z1KbBG__title",
 });
 }),
@@ -2256,10 +2285,14 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_mo
 var __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$gsap$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__ = __turbopack_context__.i("[project]/folio-frontend/node_modules/gsap/index.js [app-client] (ecmascript) <locals>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f40$gsap$2f$react$2f$src$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/folio-frontend/node_modules/@gsap/react/src/index.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$gsap$2f$ScrollTrigger$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/folio-frontend/node_modules/gsap/ScrollTrigger.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$activity$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Activity$3e$__ = __turbopack_context__.i("[project]/folio-frontend/node_modules/lucide-react/dist/esm/icons/activity.js [app-client] (ecmascript) <export default as Activity>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$headphones$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Headphones$3e$__ = __turbopack_context__.i("[project]/folio-frontend/node_modules/lucide-react/dist/esm/icons/headphones.js [app-client] (ecmascript) <export default as Headphones>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$disc$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Disc$3e$__ = __turbopack_context__.i("[project]/folio-frontend/node_modules/lucide-react/dist/esm/icons/disc.js [app-client] (ecmascript) <export default as Disc>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$headphones$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Headphones$3e$__ = __turbopack_context__.i("[project]/folio-frontend/node_modules/lucide-react/dist/esm/icons/headphones.js [app-client] (ecmascript) <export default as Headphones>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$music$2d$2$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Music2$3e$__ = __turbopack_context__.i("[project]/folio-frontend/node_modules/lucide-react/dist/esm/icons/music-2.js [app-client] (ecmascript) <export default as Music2>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$heart$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Heart$3e$__ = __turbopack_context__.i("[project]/folio-frontend/node_modules/lucide-react/dist/esm/icons/heart.js [app-client] (ecmascript) <export default as Heart>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$external$2d$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ExternalLink$3e$__ = __turbopack_context__.i("[project]/folio-frontend/node_modules/lucide-react/dist/esm/icons/external-link.js [app-client] (ecmascript) <export default as ExternalLink>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$play$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Play$3e$__ = __turbopack_context__.i("[project]/folio-frontend/node_modules/lucide-react/dist/esm/icons/play.js [app-client] (ecmascript) <export default as Play>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$activity$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Activity$3e$__ = __turbopack_context__.i("[project]/folio-frontend/node_modules/lucide-react/dist/esm/icons/activity.js [app-client] (ecmascript) <export default as Activity>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$sparkles$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Sparkles$3e$__ = __turbopack_context__.i("[project]/folio-frontend/node_modules/lucide-react/dist/esm/icons/sparkles.js [app-client] (ecmascript) <export default as Sparkles>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__ = __turbopack_context__.i("[project]/folio-frontend/src/components/MusicSection.module.css [app-client] (css module)");
 ;
 var _s = __turbopack_context__.k.signature();
@@ -2271,31 +2304,116 @@ var _s = __turbopack_context__.k.signature();
 ;
 ;
 __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$gsap$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["default"].registerPlugin(__TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$gsap$2f$ScrollTrigger$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["ScrollTrigger"]);
+const SPOTIFY_ARTISTS = [
+    {
+        id: 1,
+        name: 'The Weeknd',
+        image: 'https://images.unsplash.com/photo-1619983081563-430f63602796?w=400&h=400&fit=crop',
+        genre: 'R&B / Pop',
+        popularity: 98
+    },
+    {
+        id: 2,
+        name: 'Drake',
+        image: 'https://images.unsplash.com/photo-1493225255756-d9584f8606e9?w=400&h=400&fit=crop',
+        genre: 'Hip Hop / Rap',
+        popularity: 97
+    },
+    {
+        id: 3,
+        name: 'Kanye West',
+        image: 'https://images.unsplash.com/photo-1514525253361-bee8a48790c3?w=400&h=400&fit=crop',
+        genre: 'Hip Hop',
+        popularity: 95
+    },
+    {
+        id: 4,
+        name: 'Travis Scott',
+        image: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=400&h=400&fit=crop',
+        genre: 'Trap / Rap',
+        popularity: 94
+    }
+];
+const APPLE_PLAYLISTS = [
+    {
+        id: 1,
+        name: 'chëmabu',
+        tracks: 47,
+        duration: '3h 12m',
+        color: '#fa2d48'
+    },
+    {
+        id: 2,
+        name: 'Late Night Drive',
+        tracks: 32,
+        duration: '2h 8m',
+        color: '#ff9500'
+    },
+    {
+        id: 3,
+        name: 'Coding Focus',
+        tracks: 56,
+        duration: '4h 20m',
+        color: '#30d158'
+    }
+];
 function MusicSection() {
     _s();
-    const [activeTab, setActiveTab] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])('spotify');
     const sectionRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f40$gsap$2f$react$2f$src$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useGSAP"])({
         "MusicSection.useGSAP": ()=>{
-            __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$gsap$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["default"].from(".music-content", {
+            __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$gsap$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["default"].from(".music-header", {
                 scrollTrigger: {
                     trigger: sectionRef.current,
                     start: "top 75%"
                 },
-                y: 80,
-                opacity: 0,
-                duration: 1.2,
-                ease: "power3.out"
-            });
-            __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$gsap$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["default"].from(".music-status", {
-                scrollTrigger: {
-                    trigger: sectionRef.current,
-                    start: "top 70%"
-                },
-                y: 30,
+                y: 60,
                 opacity: 0,
                 duration: 1,
-                stagger: 0.2,
+                ease: "power3.out"
+            });
+            __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$gsap$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["default"].from(".spotify-card", {
+                scrollTrigger: {
+                    trigger: ".platforms-grid",
+                    start: "top 70%"
+                },
+                x: -60,
+                opacity: 0,
+                duration: 1,
+                delay: 0.2,
+                ease: "power3.out"
+            });
+            __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$gsap$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["default"].from(".apple-card", {
+                scrollTrigger: {
+                    trigger: ".platforms-grid",
+                    start: "top 70%"
+                },
+                x: 60,
+                opacity: 0,
+                duration: 1,
+                delay: 0.4,
+                ease: "power3.out"
+            });
+            __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$gsap$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["default"].from(".artist-item", {
+                scrollTrigger: {
+                    trigger: ".artists-grid",
+                    start: "top 80%"
+                },
+                y: 40,
+                opacity: 0,
+                duration: 0.6,
+                stagger: 0.1,
+                ease: "power2.out"
+            });
+            __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$gsap$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["default"].from(".playlist-item", {
+                scrollTrigger: {
+                    trigger: ".playlists-grid",
+                    start: "top 80%"
+                },
+                y: 40,
+                opacity: 0,
+                duration: 0.6,
+                stagger: 0.15,
                 ease: "power2.out"
             });
         }
@@ -2306,350 +2424,688 @@ function MusicSection() {
         id: "music",
         className: __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].section,
         ref: sectionRef,
-        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].container,
-            children: [
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].header,
-                    children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].badge,
-                            children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$activity$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Activity$3e$__["Activity"], {
-                                    size: 14,
-                                    className: __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].pulse
-                                }, void 0, false, {
-                                    fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
-                                    lineNumber: 45,
-                                    columnNumber: 13
-                                }, this),
-                                "SIGNAL_FREQUENCY // ACTIVE"
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
-                            lineNumber: 44,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                            className: __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].title,
-                            children: [
-                                "Sonic ",
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                    className: "text-gradient",
-                                    children: "Arsenal"
-                                }, void 0, false, {
-                                    fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
-                                    lineNumber: 48,
-                                    columnNumber: 46
-                                }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
-                            lineNumber: 48,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                            className: __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].subtitle,
-                            children: "Neural resonance patterns through top-tier acoustic data."
-                        }, void 0, false, {
-                            fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
-                            lineNumber: 49,
-                            columnNumber: 11
-                        }, this)
-                    ]
-                }, void 0, true, {
-                    fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
-                    lineNumber: 43,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].statusRow,
-                    children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "music-status",
-                            children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$headphones$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Headphones$3e$__["Headphones"], {
-                                    size: 20
-                                }, void 0, false, {
-                                    fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
-                                    lineNumber: 55,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                    children: "SYNCING WITH SPOTIFY & APPLE MUSIC"
-                                }, void 0, false, {
-                                    fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
-                                    lineNumber: 56,
-                                    columnNumber: 13
-                                }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
-                            lineNumber: 54,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "music-status",
-                            children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$disc$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Disc$3e$__["Disc"], {
-                                    size: 18,
-                                    className: __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].spinning
-                                }, void 0, false, {
-                                    fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
-                                    lineNumber: 59,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                    children: "NEURAL PATTERNS DETECTED"
-                                }, void 0, false, {
-                                    fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
-                                    lineNumber: 60,
-                                    columnNumber: 13
-                                }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
-                            lineNumber: 58,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "music-status",
-                            children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$activity$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Activity$3e$__["Activity"], {
-                                    size: 16
-                                }, void 0, false, {
-                                    fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
-                                    lineNumber: 63,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                    children: "LOSSLESS AUDIO ENGINE ACTIVE"
-                                }, void 0, false, {
-                                    fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
-                                    lineNumber: 64,
-                                    columnNumber: 13
-                                }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
-                            lineNumber: 62,
-                            columnNumber: 11
-                        }, this)
-                    ]
-                }, void 0, true, {
-                    fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
-                    lineNumber: 53,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].tabContainer,
-                    children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                            className: `${__TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].tab} ${activeTab === 'spotify' ? __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].tabActive : ''}`,
-                            onClick: ()=>setActiveTab('spotify'),
-                            children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].tabIcon,
-                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-                                        viewBox: "0 0 24 24",
-                                        fill: "currentColor",
-                                        width: "24",
-                                        height: "24",
-                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                                            d: "M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"
-                                        }, void 0, false, {
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].backgroundGlow
+            }, void 0, false, {
+                fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                lineNumber: 56,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].container,
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: `music-header ${__TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].header}`,
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].badge,
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$sparkles$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Sparkles$3e$__["Sparkles"], {
+                                        size: 14
+                                    }, void 0, false, {
+                                        fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                        lineNumber: 61,
+                                        columnNumber: 13
+                                    }, this),
+                                    "SONIC VIBES // ACTIVE"
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                lineNumber: 60,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                                className: __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].title,
+                                children: [
+                                    "My ",
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: "text-gradient",
+                                        children: "Soundtrack"
+                                    }, void 0, false, {
+                                        fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                        lineNumber: 65,
+                                        columnNumber: 16
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                lineNumber: 64,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                className: __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].subtitle,
+                                children: "The beats that fuel my code. Top artists from Spotify and curated playlists from Apple Music."
+                            }, void 0, false, {
+                                fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                lineNumber: 67,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                        lineNumber: 59,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "platforms-grid",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "spotify-card",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: `${__TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].platformCard} ${__TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].spotifyTheme}`,
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].platformHeader,
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].platformIcon,
+                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                                        viewBox: "0 0 24 24",
+                                                        fill: "currentColor",
+                                                        width: "32",
+                                                        height: "32",
+                                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                                            d: "M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                                            lineNumber: 79,
+                                                            columnNumber: 21
+                                                        }, this)
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                                        lineNumber: 78,
+                                                        columnNumber: 19
+                                                    }, this)
+                                                }, void 0, false, {
+                                                    fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                                    lineNumber: 77,
+                                                    columnNumber: 17
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].platformInfo,
+                                                    children: [
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                                            className: __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].platformName,
+                                                            children: "Spotify"
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                                            lineNumber: 83,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                            className: __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].platformSubtitle,
+                                                            children: "Top Artists"
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                                            lineNumber: 84,
+                                                            columnNumber: 19
+                                                        }, this)
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                                    lineNumber: 82,
+                                                    columnNumber: 17
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].platformStatus,
+                                                    children: [
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$activity$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Activity$3e$__["Activity"], {
+                                                            size: 12,
+                                                            className: __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].pulse
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                                            lineNumber: 87,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        "Live"
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                                    lineNumber: 86,
+                                                    columnNumber: 17
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
                                             fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
                                             lineNumber: 76,
-                                            columnNumber: 17
-                                        }, this)
-                                    }, void 0, false, {
-                                        fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
-                                        lineNumber: 75,
-                                        columnNumber: 15
-                                    }, this)
-                                }, void 0, false, {
-                                    fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
-                                    lineNumber: 74,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                    children: "Spotify"
-                                }, void 0, false, {
-                                    fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
-                                    lineNumber: 79,
-                                    columnNumber: 13
-                                }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
-                            lineNumber: 70,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                            className: `${__TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].tab} ${activeTab === 'apple' ? __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].tabActive : ''}`,
-                            onClick: ()=>setActiveTab('apple'),
-                            children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].tabIcon,
-                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-                                        viewBox: "0 0 24 24",
-                                        fill: "currentColor",
-                                        width: "24",
-                                        height: "24",
-                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                                            d: "M23.994 6.124a9.23 9.23 0 00-.24-2.19c-.317-1.31-1.062-2.31-2.18-3.043a5.022 5.022 0 00-1.877-.726 10.197 10.197 0 00-1.564-.15c-.04-.002-.083-.01-.124-.013H5.988c-.152.01-.303.017-.455.026-.747.043-1.49.123-2.22.28-.78.17-1.51.465-2.18.896-.89.578-1.53 1.33-1.89 2.31-.23.6-.35 1.22-.382 1.85-.006.153-.014.306-.014.46V17.99c.01.667.09 1.33.24 1.98.32 1.31 1.07 2.31 2.18 3.04.75.48 1.56.77 2.42.91.89.15 1.79.21 2.7.18.13-.01.26-.01.39-.01h11.7c.14 0 .28.01.42.02.86.06 1.71.01 2.55-.16.96-.18 1.87-.51 2.67-1.02.9-.58 1.54-1.35 1.89-2.34.23-.61.35-1.24.39-1.89.02-.26.03-.52.03-.79V6.874c-.01-.25-.02-.5-.04-.75zm-6.54 10.45c-.22.73-.59 1.36-1.1 1.9-.71.74-1.57 1.14-2.56 1.2-.65.04-1.29-.08-1.88-.39-.42-.22-.83-.45-1.24-.68-.46-.26-.97-.4-1.5-.41-.59-.01-1.14.14-1.65.42-.47.26-.94.52-1.41.78-.55.31-1.14.45-1.76.44-.77-.03-1.45-.26-2.04-.7-.65-.48-1.12-1.09-1.43-1.82-.42-.97-.55-2-.4-3.04.11-.78.35-1.52.71-2.22.47-.92 1.09-1.71 1.89-2.33.62-.48 1.31-.8 2.08-.96.91-.19 1.81-.1 2.68.27.42.18.82.39 1.22.6.49.26 1 .4 1.54.41.69.01 1.33-.16 1.92-.5.42-.23.84-.46 1.25-.69.71-.4 1.48-.57 2.29-.52.85.05 1.63.29 2.32.74.68.44 1.21 1.01 1.62 1.71.41.69.66 1.44.74 2.24.06.54.02 1.08-.1 1.61z"
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: `artists-grid ${__TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].artistsGrid}`,
+                                            children: SPOTIFY_ARTISTS.map((artist)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: `artist-item ${__TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].artistCard}`,
+                                                    children: [
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                            className: __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].artistImageWrapper,
+                                                            children: [
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                                                    src: artist.image,
+                                                                    alt: artist.name,
+                                                                    className: __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].artistImage
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                                                    lineNumber: 96,
+                                                                    columnNumber: 23
+                                                                }, this),
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                    className: __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].artistOverlay,
+                                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                        className: __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].playButton,
+                                                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$play$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Play$3e$__["Play"], {
+                                                                            size: 16,
+                                                                            fill: "currentColor"
+                                                                        }, void 0, false, {
+                                                                            fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                                                            lineNumber: 99,
+                                                                            columnNumber: 27
+                                                                        }, this)
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                                                        lineNumber: 98,
+                                                                        columnNumber: 25
+                                                                    }, this)
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                                                    lineNumber: 97,
+                                                                    columnNumber: 23
+                                                                }, this)
+                                                            ]
+                                                        }, void 0, true, {
+                                                            fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                                            lineNumber: 95,
+                                                            columnNumber: 21
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                            className: __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].artistInfo,
+                                                            children: [
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
+                                                                    className: __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].artistName,
+                                                                    children: artist.name
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                                                    lineNumber: 104,
+                                                                    columnNumber: 23
+                                                                }, this),
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                    className: __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].artistGenre,
+                                                                    children: artist.genre
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                                                    lineNumber: 105,
+                                                                    columnNumber: 23
+                                                                }, this),
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                    className: __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].artistStats,
+                                                                    children: [
+                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$heart$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Heart$3e$__["Heart"], {
+                                                                            size: 12
+                                                                        }, void 0, false, {
+                                                                            fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                                                            lineNumber: 107,
+                                                                            columnNumber: 25
+                                                                        }, this),
+                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                            children: [
+                                                                                artist.popularity,
+                                                                                "% match"
+                                                                            ]
+                                                                        }, void 0, true, {
+                                                                            fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                                                            lineNumber: 108,
+                                                                            columnNumber: 25
+                                                                        }, this)
+                                                                    ]
+                                                                }, void 0, true, {
+                                                                    fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                                                    lineNumber: 106,
+                                                                    columnNumber: 23
+                                                                }, this)
+                                                            ]
+                                                        }, void 0, true, {
+                                                            fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                                            lineNumber: 103,
+                                                            columnNumber: 21
+                                                        }, this)
+                                                    ]
+                                                }, artist.id, true, {
+                                                    fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                                    lineNumber: 94,
+                                                    columnNumber: 19
+                                                }, this))
                                         }, void 0, false, {
                                             fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
-                                            lineNumber: 87,
-                                            columnNumber: 17
+                                            lineNumber: 92,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                            href: "https://open.spotify.com/user/your-profile",
+                                            target: "_blank",
+                                            rel: "noopener noreferrer",
+                                            className: `${__TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].platformLink} ${__TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].spotifyLink}`,
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$disc$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Disc$3e$__["Disc"], {
+                                                    size: 18
+                                                }, void 0, false, {
+                                                    fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                                    lineNumber: 121,
+                                                    columnNumber: 17
+                                                }, this),
+                                                "Follow on Spotify",
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$external$2d$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ExternalLink$3e$__["ExternalLink"], {
+                                                    size: 14
+                                                }, void 0, false, {
+                                                    fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                                    lineNumber: 123,
+                                                    columnNumber: 17
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                            lineNumber: 115,
+                                            columnNumber: 15
                                         }, this)
-                                    }, void 0, false, {
-                                        fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
-                                        lineNumber: 86,
-                                        columnNumber: 15
-                                    }, this)
-                                }, void 0, false, {
+                                    ]
+                                }, void 0, true, {
                                     fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
-                                    lineNumber: 85,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                    children: "Apple Music"
-                                }, void 0, false, {
-                                    fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
-                                    lineNumber: 90,
+                                    lineNumber: 75,
                                     columnNumber: 13
                                 }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
-                            lineNumber: 81,
-                            columnNumber: 11
-                        }, this)
-                    ]
-                }, void 0, true, {
-                    fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
-                    lineNumber: 69,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "music-content",
-                    children: activeTab === 'spotify' ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].embedContainer,
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("iframe", {
-                            style: {
-                                borderRadius: '12px'
-                            },
-                            src: "https://open.spotify.com/embed/playlist/34pumPxdJLbY0cmOb8mK7n?utm_source=generator&theme=0",
-                            width: "100%",
-                            height: "500",
-                            frameBorder: "0",
-                            allowFullScreen: true,
-                            allow: "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture",
-                            loading: "lazy",
-                            className: __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].spotifyEmbed
-                        }, void 0, false, {
-                            fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
-                            lineNumber: 98,
-                            columnNumber: 15
-                        }, this)
-                    }, void 0, false, {
+                            }, void 0, false, {
+                                fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                lineNumber: 74,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "apple-card",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: `${__TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].platformCard} ${__TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].appleTheme}`,
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].platformHeader,
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: `${__TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].platformIcon} ${__TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].appleIcon}`,
+                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                                        viewBox: "0 0 24 24",
+                                                        fill: "currentColor",
+                                                        width: "32",
+                                                        height: "32",
+                                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                                            d: "M23.994 6.124a9.23 9.23 0 00-.24-2.19c-.317-1.31-1.062-2.31-2.18-3.043a5.022 5.022 0 00-1.877-.726 10.197 10.197 0 00-1.564-.15c-.04-.002-.083-.01-.124-.013H5.988c-.152.01-.303.017-.455.026-.747.043-1.49.123-2.22.28-.78.17-1.51.465-2.18.896-.89.578-1.53 1.33-1.89 2.31-.23.6-.35 1.22-.382 1.85-.006.153-.014.306-.014.46V17.99c.01.667.09 1.33.24 1.98.32 1.31 1.07 2.31 2.18 3.04.75.48 1.56.77 2.42.91.89.15 1.79.21 2.7.18.13-.01.26-.01.39-.01h11.7c.14 0 .28.01.42.02.86.06 1.71.01 2.55-.16.96-.18 1.87-.51 2.67-1.02.9-.58 1.54-1.35 1.89-2.34.23-.61.35-1.24.39-1.89.02-.26.03-.52.03-.79V6.874c-.01-.25-.02-.5-.04-.75z"
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                                            lineNumber: 134,
+                                                            columnNumber: 21
+                                                        }, this)
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                                        lineNumber: 133,
+                                                        columnNumber: 19
+                                                    }, this)
+                                                }, void 0, false, {
+                                                    fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                                    lineNumber: 132,
+                                                    columnNumber: 17
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].platformInfo,
+                                                    children: [
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                                            className: __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].platformName,
+                                                            children: "Apple Music"
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                                            lineNumber: 138,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                            className: __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].platformSubtitle,
+                                                            children: "My Playlists"
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                                            lineNumber: 139,
+                                                            columnNumber: 19
+                                                        }, this)
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                                    lineNumber: 137,
+                                                    columnNumber: 17
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].platformStatus,
+                                                    children: [
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$headphones$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Headphones$3e$__["Headphones"], {
+                                                            size: 12
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                                            lineNumber: 142,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        "Lossless"
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                                    lineNumber: 141,
+                                                    columnNumber: 17
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                            lineNumber: 131,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: `playlists-grid ${__TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].playlistsGrid}`,
+                                            children: APPLE_PLAYLISTS.map((playlist)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: `playlist-item ${__TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].playlistCard}`,
+                                                    children: [
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                            className: __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].playlistArtwork,
+                                                            style: {
+                                                                background: `linear-gradient(135deg, ${playlist.color}20 0%, ${playlist.color}40 100%)`
+                                                            },
+                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                className: __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].playlistIcon,
+                                                                style: {
+                                                                    color: playlist.color
+                                                                },
+                                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$music$2d$2$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Music2$3e$__["Music2"], {
+                                                                    size: 32
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                                                    lineNumber: 152,
+                                                                    columnNumber: 25
+                                                                }, this)
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                                                lineNumber: 151,
+                                                                columnNumber: 23
+                                                            }, this)
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                                            lineNumber: 150,
+                                                            columnNumber: 21
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                            className: __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].playlistInfo,
+                                                            children: [
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
+                                                                    className: __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].playlistName,
+                                                                    children: playlist.name
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                                                    lineNumber: 156,
+                                                                    columnNumber: 23
+                                                                }, this),
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                    className: __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].playlistMeta,
+                                                                    children: [
+                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                            children: [
+                                                                                playlist.tracks,
+                                                                                " tracks"
+                                                                            ]
+                                                                        }, void 0, true, {
+                                                                            fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                                                            lineNumber: 158,
+                                                                            columnNumber: 25
+                                                                        }, this),
+                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                            className: __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].dot,
+                                                                            children: "•"
+                                                                        }, void 0, false, {
+                                                                            fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                                                            lineNumber: 159,
+                                                                            columnNumber: 25
+                                                                        }, this),
+                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                            children: playlist.duration
+                                                                        }, void 0, false, {
+                                                                            fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                                                            lineNumber: 160,
+                                                                            columnNumber: 25
+                                                                        }, this)
+                                                                    ]
+                                                                }, void 0, true, {
+                                                                    fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                                                    lineNumber: 157,
+                                                                    columnNumber: 23
+                                                                }, this)
+                                                            ]
+                                                        }, void 0, true, {
+                                                            fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                                            lineNumber: 155,
+                                                            columnNumber: 21
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                            className: __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].playlistPlay,
+                                                            style: {
+                                                                background: playlist.color
+                                                            },
+                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$play$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Play$3e$__["Play"], {
+                                                                size: 16,
+                                                                fill: "white"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                                                lineNumber: 164,
+                                                                columnNumber: 23
+                                                            }, this)
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                                            lineNumber: 163,
+                                                            columnNumber: 21
+                                                        }, this)
+                                                    ]
+                                                }, playlist.id, true, {
+                                                    fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                                    lineNumber: 149,
+                                                    columnNumber: 19
+                                                }, this))
+                                        }, void 0, false, {
+                                            fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                            lineNumber: 147,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].embedContainer,
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("iframe", {
+                                                allow: "autoplay *; encrypted-media *; fullscreen *",
+                                                frameBorder: "0",
+                                                height: "180",
+                                                style: {
+                                                    width: '100%',
+                                                    maxWidth: '100%',
+                                                    overflow: 'hidden',
+                                                    borderRadius: '12px',
+                                                    background: 'transparent'
+                                                },
+                                                sandbox: "allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation",
+                                                src: "https://embed.music.apple.com/in/playlist/ch%C3%ABmabu/pl.u-76oNkm7sv3qBJo2"
+                                            }, void 0, false, {
+                                                fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                                lineNumber: 171,
+                                                columnNumber: 17
+                                            }, this)
+                                        }, void 0, false, {
+                                            fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                            lineNumber: 170,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                            href: "https://music.apple.com/in/playlist/ch%C3%ABmabu/pl.u-76oNkm7sv3qBJo2",
+                                            target: "_blank",
+                                            rel: "noopener noreferrer",
+                                            className: `${__TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].platformLink} ${__TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].appleLink}`,
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$music$2d$2$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Music2$3e$__["Music2"], {
+                                                    size: 18
+                                                }, void 0, false, {
+                                                    fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                                    lineNumber: 187,
+                                                    columnNumber: 17
+                                                }, this),
+                                                "Listen on Apple Music",
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$external$2d$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ExternalLink$3e$__["ExternalLink"], {
+                                                    size: 14
+                                                }, void 0, false, {
+                                                    fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                                    lineNumber: 189,
+                                                    columnNumber: 17
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                            lineNumber: 181,
+                                            columnNumber: 15
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                    lineNumber: 130,
+                                    columnNumber: 13
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                lineNumber: 129,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
                         fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
-                        lineNumber: 97,
-                        columnNumber: 13
-                    }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].embedContainer,
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("iframe", {
-                            allow: "autoplay *; encrypted-media *;",
-                            frameBorder: "0",
-                            height: "500",
-                            style: {
-                                width: '100%',
-                                maxWidth: '100%',
-                                overflow: 'hidden',
-                                borderRadius: '12px',
-                                background: 'transparent'
-                            },
-                            sandbox: "allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation",
-                            src: "https://embed.music.apple.com/in/playlist/ch%C3%ABmabu/pl.u-76oNkm7sv3qBJo2",
-                            className: __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].appleEmbed
-                        }, void 0, false, {
-                            fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
-                            lineNumber: 112,
-                            columnNumber: 15
-                        }, this)
-                    }, void 0, false, {
+                        lineNumber: 72,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].statusBar,
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].statusItem,
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$disc$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Disc$3e$__["Disc"], {
+                                        size: 16,
+                                        className: __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].spinning
+                                    }, void 0, false, {
+                                        fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                        lineNumber: 197,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        children: "Now Playing"
+                                    }, void 0, false, {
+                                        fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                        lineNumber: 198,
+                                        columnNumber: 13
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                lineNumber: 196,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].statusDivider
+                            }, void 0, false, {
+                                fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                lineNumber: 200,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].statusItem,
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].equalizer,
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {}, void 0, false, {
+                                                fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                                lineNumber: 203,
+                                                columnNumber: 15
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {}, void 0, false, {
+                                                fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                                lineNumber: 203,
+                                                columnNumber: 28
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {}, void 0, false, {
+                                                fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                                lineNumber: 203,
+                                                columnNumber: 41
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {}, void 0, false, {
+                                                fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                                lineNumber: 203,
+                                                columnNumber: 54
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                        lineNumber: 202,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        children: "Lossless Audio Active"
+                                    }, void 0, false, {
+                                        fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                        lineNumber: 205,
+                                        columnNumber: 13
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                lineNumber: 201,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].statusDivider
+                            }, void 0, false, {
+                                fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                lineNumber: 207,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].statusItem,
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$heart$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Heart$3e$__["Heart"], {
+                                        size: 14
+                                    }, void 0, false, {
+                                        fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                        lineNumber: 209,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        children: "Syncing Across Devices"
+                                    }, void 0, false, {
+                                        fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                        lineNumber: 210,
+                                        columnNumber: 13
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                                lineNumber: 208,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
                         fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
-                        lineNumber: 111,
-                        columnNumber: 13
+                        lineNumber: 195,
+                        columnNumber: 9
                     }, this)
-                }, void 0, false, {
-                    fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
-                    lineNumber: 95,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].linksRow,
-                    children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                            href: "https://open.spotify.com/playlist/34pumPxdJLbY0cmOb8mK7n",
-                            target: "_blank",
-                            rel: "noopener noreferrer",
-                            className: __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].linkBtn,
-                            children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$external$2d$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ExternalLink$3e$__["ExternalLink"], {
-                                    size: 16
-                                }, void 0, false, {
-                                    fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
-                                    lineNumber: 133,
-                                    columnNumber: 13
-                                }, this),
-                                "Open in Spotify"
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
-                            lineNumber: 127,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                            href: "https://music.apple.com/in/playlist/ch%C3%ABmabu/pl.u-76oNkm7sv3qBJo2",
-                            target: "_blank",
-                            rel: "noopener noreferrer",
-                            className: __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$src$2f$components$2f$MusicSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].linkBtn,
-                            children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$external$2d$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ExternalLink$3e$__["ExternalLink"], {
-                                    size: 16
-                                }, void 0, false, {
-                                    fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
-                                    lineNumber: 142,
-                                    columnNumber: 13
-                                }, this),
-                                "Open in Apple Music"
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
-                            lineNumber: 136,
-                            columnNumber: 11
-                        }, this)
-                    ]
-                }, void 0, true, {
-                    fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
-                    lineNumber: 126,
-                    columnNumber: 9
-                }, this)
-            ]
-        }, void 0, true, {
-            fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
-            lineNumber: 42,
-            columnNumber: 7
-        }, this)
-    }, void 0, false, {
+                ]
+            }, void 0, true, {
+                fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
+                lineNumber: 58,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
         fileName: "[project]/folio-frontend/src/components/MusicSection.tsx",
-        lineNumber: 41,
+        lineNumber: 55,
         columnNumber: 5
     }, this);
 }
-_s(MusicSection, "04QI2FurOjNNbR+5em0l3u77ENk=", false, function() {
+_s(MusicSection, "mpOs1qQcCKpcFvuTT9MC8POvKRs=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f40$gsap$2f$react$2f$src$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useGSAP"]
     ];
