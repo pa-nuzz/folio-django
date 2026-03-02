@@ -1,0 +1,372 @@
+/* [project]/folio-frontend/src/components/GithubSection.module.css [app-client] (css) */
+.GithubSection-module__15yZcW__section {
+  background: var(--bg-dark);
+  z-index: 10;
+  flex-direction: column;
+  min-height: 100vh;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.GithubSection-module__15yZcW__loaderContainer {
+  min-height: 50vh;
+  color: var(--neon-lime);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  display: flex;
+}
+
+.GithubSection-module__15yZcW__spinner {
+  animation: 2s linear infinite GithubSection-module__15yZcW__spin;
+}
+
+@keyframes GithubSection-module__15yZcW__spin {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.GithubSection-module__15yZcW__header {
+  text-align: center;
+  padding: 6rem 5% 3rem;
+}
+
+.GithubSection-module__15yZcW__badge {
+  color: var(--neon-lime);
+  letter-spacing: .4em;
+  text-transform: uppercase;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background: #ffffff0d;
+  border: 1px solid #ccff004d;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 1.5rem;
+  padding: 8px 18px;
+  font-size: .65rem;
+  font-weight: 800;
+  display: inline-flex;
+  box-shadow: 0 0 20px #ccff001a;
+}
+
+.GithubSection-module__15yZcW__title {
+  color: #fff;
+  margin-bottom: 1rem;
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-weight: 900;
+}
+
+.GithubSection-module__15yZcW__subtitle {
+  color: #ffffff80;
+  text-transform: uppercase;
+  letter-spacing: .25em;
+  font-size: .9rem;
+  font-weight: 600;
+}
+
+.GithubSection-module__15yZcW__trackContainer {
+  flex: 1;
+  overflow: hidden;
+}
+
+.GithubSection-module__15yZcW__track {
+  height: 70vh;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  display: flex;
+}
+
+.GithubSection-module__15yZcW__introSlide {
+  flex-direction: column;
+  justify-content: center;
+  min-width: 40vw;
+  max-width: 500px;
+  margin-right: 2rem;
+  padding-right: 4rem;
+  display: flex;
+}
+
+.GithubSection-module__15yZcW__slideTitle {
+  color: #fff;
+  margin-bottom: 1.5rem;
+  font-size: clamp(2rem, 3vw, 3rem);
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.GithubSection-module__15yZcW__introIcon {
+  width: 80px;
+  height: 80px;
+  color: var(--neon-lime);
+  background: #ccff001a;
+  border: 1px solid #ccff004d;
+  border-radius: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  display: flex;
+}
+
+.GithubSection-module__15yZcW__introStats {
+  gap: 2rem;
+  margin-top: 2rem;
+  display: flex;
+}
+
+.GithubSection-module__15yZcW__introStat {
+  color: #fff9;
+  align-items: center;
+  gap: .75rem;
+  font-size: .85rem;
+  font-weight: 600;
+  display: flex;
+}
+
+.GithubSection-module__15yZcW__introStat svg {
+  color: var(--neon-lime);
+}
+
+.GithubSection-module__15yZcW__slideSubtitle {
+  color: #ffffff80;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.GithubSection-module__15yZcW__repoSlide {
+  align-items: center;
+  min-width: 450px;
+  max-width: 500px;
+  padding: 0 1rem;
+  display: flex;
+}
+
+.GithubSection-module__15yZcW__repoCard {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background: #0a0a0a99;
+  border: 1px solid #ffffff14;
+  border-radius: 1rem;
+  flex-direction: column;
+  height: fit-content;
+  transition: all .4s cubic-bezier(.16, 1, .3, 1);
+  display: flex;
+  overflow: hidden;
+}
+
+.GithubSection-module__15yZcW__repoCardHover {
+  background: #141414b3;
+  border-color: #ccff004d;
+  transform: translateY(-8px);
+  box-shadow: 0 30px 60px #00000080;
+}
+
+.GithubSection-module__15yZcW__repoImageContainer {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
+.GithubSection-module__15yZcW__repoImage {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: transform .6s;
+}
+
+.GithubSection-module__15yZcW__repoCardHover .GithubSection-module__15yZcW__repoImage {
+  transform: scale(1.1);
+}
+
+.GithubSection-module__15yZcW__repoImageOverlay {
+  background: linear-gradient(#0000 50%, #000c 100%);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.GithubSection-module__15yZcW__repoImageContainer .GithubSection-module__15yZcW__repoNumber {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background: #0009;
+  border: 1px solid #ccff004d;
+  border-radius: .5rem;
+  padding: .5rem 1rem;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.GithubSection-module__15yZcW__repoHeader {
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: .5rem;
+  display: flex;
+}
+
+.GithubSection-module__15yZcW__repoIcon {
+  width: 40px;
+  height: 40px;
+  color: var(--neon-lime);
+  background: #ccff001a;
+  border: 1px solid #ccff004d;
+  border-radius: .75rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.GithubSection-module__15yZcW__repoContent {
+  flex-direction: column;
+  gap: .75rem;
+  padding: 1.5rem;
+  display: flex;
+}
+
+.GithubSection-module__15yZcW__repoNumber {
+  color: var(--neon-lime);
+  letter-spacing: .1em;
+  font-size: .7rem;
+  font-weight: 900;
+}
+
+.GithubSection-module__15yZcW__repoName {
+  color: #fff;
+  letter-spacing: -.02em;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.GithubSection-module__15yZcW__repoDesc {
+  color: #ffffff80;
+  font-size: .9rem;
+  line-height: 1.5;
+}
+
+.GithubSection-module__15yZcW__repoStats {
+  border-top: 1px solid #ffffff0d;
+  border-bottom: 1px solid #ffffff0d;
+  gap: 1.5rem;
+  padding: 1.25rem 0;
+  display: flex;
+}
+
+.GithubSection-module__15yZcW__stat {
+  flex-direction: column;
+  gap: .25rem;
+  display: flex;
+}
+
+.GithubSection-module__15yZcW__statLabel {
+  color: #fff6;
+  letter-spacing: .1em;
+  font-size: .6rem;
+  font-weight: 800;
+}
+
+.GithubSection-module__15yZcW__statValue {
+  color: #fff;
+  align-items: center;
+  gap: .4rem;
+  font-size: .85rem;
+  font-weight: 700;
+  display: flex;
+}
+
+.GithubSection-module__15yZcW__repoLink {
+  background: var(--neon-lime);
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  border-radius: .5rem;
+  align-items: center;
+  gap: .5rem;
+  width: fit-content;
+  margin-top: .5rem;
+  padding: .75rem 1.25rem;
+  font-size: .75rem;
+  font-weight: 800;
+  text-decoration: none;
+  transition: all .3s;
+  display: inline-flex;
+}
+
+.GithubSection-module__15yZcW__repoLink:hover {
+  background: var(--neon-yellow);
+  transform: translateX(4px);
+  box-shadow: 0 0 20px #ccff004d;
+}
+
+.GithubSection-module__15yZcW__finalSlide {
+  justify-content: center;
+  align-items: center;
+  min-width: 40vw;
+  max-width: 500px;
+  padding: 0 2rem;
+  display: flex;
+}
+
+.GithubSection-module__15yZcW__viewAllLink {
+  color: #fff;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background: #0a0a0a99;
+  border: 1px solid #ffffff1a;
+  border-radius: 1rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 3rem;
+  text-decoration: none;
+  transition: all .4s;
+  display: flex;
+}
+
+.GithubSection-module__15yZcW__viewAllLink:hover {
+  background: #141414b3;
+  border-color: #ccff004d;
+  transform: translateY(-8px);
+  box-shadow: 0 30px 60px #00000080;
+}
+
+.GithubSection-module__15yZcW__viewAllLink span {
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+@media (max-width: 768px) {
+  .GithubSection-module__15yZcW__track {
+    flex-direction: column;
+    gap: 2rem;
+    height: auto;
+    padding: 2rem 5%;
+  }
+
+  .GithubSection-module__15yZcW__introSlide, .GithubSection-module__15yZcW__repoSlide, .GithubSection-module__15yZcW__finalSlide {
+    min-width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .GithubSection-module__15yZcW__repoCard {
+    padding: 2rem;
+  }
+
+  .GithubSection-module__15yZcW__repoSlide {
+    align-items: stretch;
+  }
+}
+
+/*# sourceMappingURL=folio-frontend_src_components_GithubSection_module_css_bad6b30c._.single.css.map*/

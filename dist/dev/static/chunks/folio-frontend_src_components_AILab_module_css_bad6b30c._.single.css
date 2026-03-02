@@ -1,0 +1,645 @@
+/* [project]/folio-frontend/src/components/AILab.module.css [app-client] (css) */
+.AILab-module__0w03pW__section {
+  z-index: 10;
+  background: #000;
+  min-height: 100vh;
+  padding: 8rem 5%;
+  position: relative;
+  overflow: visible;
+}
+
+.AILab-module__0w03pW__section:before {
+  content: "";
+  pointer-events: none;
+  z-index: 0;
+  background: radial-gradient(circle at 80% 20%, #ccff000f 0%, #0000 50%), radial-gradient(circle at 20% 80%, #00ffff0a 0%, #0000 50%);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.AILab-module__0w03pW__container {
+  z-index: 1;
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.AILab-module__0w03pW__header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.AILab-module__0w03pW__badge {
+  color: var(--neon-lime);
+  letter-spacing: .2em;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background: #ccff001a;
+  border: 1px solid #ccff004d;
+  border-radius: 2rem;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+  padding: 10px 20px;
+  font-size: .75rem;
+  font-weight: 800;
+  display: inline-flex;
+  box-shadow: 0 0 30px #ccff0026;
+}
+
+.AILab-module__0w03pW__title {
+  letter-spacing: -.02em;
+  color: #fff;
+  margin-bottom: 1rem;
+  font-size: clamp(3rem, 5vw, 4rem);
+  font-weight: 900;
+}
+
+.AILab-module__0w03pW__subtitle {
+  color: #ffffff80;
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1rem;
+}
+
+.AILab-module__0w03pW__dashboard {
+  -webkit-backdrop-filter: blur(40px);
+  backdrop-filter: blur(40px);
+  background: #0f0f0fcc;
+  border: 1px solid #ffffff14;
+  border-radius: 1.5rem;
+  height: 700px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 50px 150px #000000e6;
+}
+
+.AILab-module__0w03pW__sidebar {
+  background: #0006;
+  border-right: 1px solid #ffffff14;
+  flex-direction: column;
+  width: 320px;
+  padding: 1.5rem;
+  display: flex;
+}
+
+.AILab-module__0w03pW__sidebarHeader {
+  background: #ccff000d;
+  border: 1px solid #ccff0026;
+  border-radius: 1rem;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  display: flex;
+}
+
+.AILab-module__0w03pW__sidebarIcon {
+  background: var(--neon-lime);
+  color: #000;
+  border-radius: 12px;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  display: flex;
+}
+
+.AILab-module__0w03pW__sidebarInfo {
+  flex: 1;
+}
+
+.AILab-module__0w03pW__sidebarTitle {
+  color: #fff;
+  margin-bottom: .25rem;
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.AILab-module__0w03pW__sidebarStatus {
+  color: #ffffff80;
+  align-items: center;
+  gap: .5rem;
+  font-size: .8rem;
+  display: flex;
+}
+
+.AILab-module__0w03pW__statusDot {
+  background: #0f0;
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  animation: 2s infinite AILab-module__0w03pW__pulse;
+  box-shadow: 0 0 10px #0f0;
+}
+
+@keyframes AILab-module__0w03pW__pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: .5;
+  }
+}
+
+.AILab-module__0w03pW__moduleList {
+  flex-direction: column;
+  flex: 1;
+  gap: .75rem;
+  display: flex;
+}
+
+.AILab-module__0w03pW__moduleButton {
+  color: #ffffffb3;
+  cursor: pointer;
+  text-align: left;
+  background: #ffffff08;
+  border: 1px solid #ffffff0d;
+  border-radius: .75rem;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  transition: all .3s;
+  display: flex;
+}
+
+.AILab-module__0w03pW__moduleButton:hover {
+  background: #ffffff0f;
+  border-color: #cf03;
+  transform: translateX(4px);
+}
+
+.AILab-module__0w03pW__moduleButtonActive {
+  color: var(--neon-lime);
+  background: #ccff001a;
+  border-color: #ccff004d;
+}
+
+.AILab-module__0w03pW__moduleButtonIcon {
+  background: #ffffff0d;
+  border-radius: .5rem;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  display: flex;
+}
+
+.AILab-module__0w03pW__moduleButtonActive .AILab-module__0w03pW__moduleButtonIcon {
+  background: #cf03;
+}
+
+.AILab-module__0w03pW__moduleButtonInfo {
+  flex: 1;
+}
+
+.AILab-module__0w03pW__moduleButtonLabel {
+  margin-bottom: .25rem;
+  font-size: .9rem;
+  font-weight: 700;
+  display: block;
+}
+
+.AILab-module__0w03pW__moduleButtonDesc {
+  color: #fff6;
+  font-size: .75rem;
+  display: block;
+}
+
+.AILab-module__0w03pW__moduleButtonChevron {
+  opacity: 0;
+  transition: all .3s;
+}
+
+.AILab-module__0w03pW__moduleButton:hover .AILab-module__0w03pW__moduleButtonChevron, .AILab-module__0w03pW__moduleButtonActive .AILab-module__0w03pW__moduleButtonChevron {
+  opacity: 1;
+}
+
+.AILab-module__0w03pW__sidebarFooter {
+  border-top: 1px solid #ffffff0d;
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+.AILab-module__0w03pW__systemStats {
+  flex-direction: column;
+  gap: .5rem;
+  display: flex;
+}
+
+.AILab-module__0w03pW__systemStats .AILab-module__0w03pW__stat {
+  color: #fff6;
+  align-items: center;
+  gap: .5rem;
+  font-size: .75rem;
+  display: flex;
+}
+
+.AILab-module__0w03pW__content, .AILab-module__0w03pW__chatWindow {
+  flex-direction: column;
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+.AILab-module__0w03pW__messages {
+  flex-direction: column;
+  flex: 1;
+  gap: 1rem;
+  padding: 1.5rem;
+  display: flex;
+  overflow-y: auto;
+}
+
+.AILab-module__0w03pW__messages::-webkit-scrollbar {
+  width: 6px;
+}
+
+.AILab-module__0w03pW__messages::-webkit-scrollbar-track {
+  background: #ffffff0d;
+  border-radius: 3px;
+}
+
+.AILab-module__0w03pW__messages::-webkit-scrollbar-thumb {
+  background: #ccff004d;
+  border-radius: 3px;
+}
+
+.AILab-module__0w03pW__message {
+  border-radius: 1rem;
+  max-width: 85%;
+  padding: 1rem 1.25rem;
+  animation: .3s AILab-module__0w03pW__slideIn;
+  position: relative;
+}
+
+@keyframes AILab-module__0w03pW__slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.AILab-module__0w03pW__messageHeader {
+  align-items: center;
+  gap: .75rem;
+  margin-bottom: .5rem;
+  display: flex;
+}
+
+.AILab-module__0w03pW__messageAvatar {
+  background: #ffffff1a;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  font-size: .8rem;
+  display: flex;
+}
+
+.AILab-module__0w03pW__messageName {
+  color: #fff;
+  font-size: .85rem;
+  font-weight: 700;
+}
+
+.AILab-module__0w03pW__messageTime {
+  color: #ffffff4d;
+  margin-left: auto;
+  font-size: .75rem;
+}
+
+.AILab-module__0w03pW__messageContent {
+  color: #ffffffe6;
+  font-size: .95rem;
+  line-height: 1.6;
+}
+
+.AILab-module__0w03pW__messageContent p {
+  margin: 0 0 .5rem;
+}
+
+.AILab-module__0w03pW__aiMessage {
+  background: #ffffff0d;
+  border: 1px solid #ffffff1a;
+  align-self: flex-start;
+}
+
+.AILab-module__0w03pW__aiMessage .AILab-module__0w03pW__messageAvatar {
+  color: var(--neon-lime);
+  background: #cf03;
+}
+
+.AILab-module__0w03pW__userMessage {
+  background: #ccff001a;
+  border: 1px solid #cf03;
+  align-self: flex-end;
+}
+
+.AILab-module__0w03pW__userMessage .AILab-module__0w03pW__messageAvatar {
+  color: #fff;
+  background: #ffffff26;
+}
+
+.AILab-module__0w03pW__systemMessage {
+  background: #ff64641a;
+  border: 1px solid #ff646433;
+  align-self: center;
+  max-width: 70%;
+}
+
+.AILab-module__0w03pW__systemMessage .AILab-module__0w03pW__messageAvatar {
+  color: #ff6464;
+  background: #ff646433;
+}
+
+.AILab-module__0w03pW__typingIndicator {
+  color: #fff9;
+  background: #ffffff0d;
+  border: 1px solid #ffffff1a;
+  border-radius: 1rem;
+  align-self: flex-start;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  font-size: .9rem;
+  display: flex;
+}
+
+.AILab-module__0w03pW__typingDots {
+  gap: 4px;
+  display: flex;
+}
+
+.AILab-module__0w03pW__typingDots span {
+  background: var(--neon-lime);
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  animation: 1.4s ease-in-out infinite both AILab-module__0w03pW__typing;
+}
+
+.AILab-module__0w03pW__typingDots span:first-child {
+  animation-delay: -.32s;
+}
+
+.AILab-module__0w03pW__typingDots span:nth-child(2) {
+  animation-delay: -.16s;
+}
+
+@keyframes AILab-module__0w03pW__typing {
+  0%, 80%, 100% {
+    transform: scale(0);
+  }
+
+  40% {
+    transform: scale(1);
+  }
+}
+
+.AILab-module__0w03pW__progressBar {
+  background: #ffffff1a;
+  border-radius: 2px;
+  width: 100px;
+  height: 4px;
+  margin-top: .5rem;
+  overflow: hidden;
+}
+
+.AILab-module__0w03pW__progressFill {
+  background: var(--neon-lime);
+  border-radius: 2px;
+  height: 100%;
+  transition: width .3s;
+}
+
+.AILab-module__0w03pW__inputArea {
+  background: #0000004d;
+  border-top: 1px solid #ffffff14;
+  gap: .75rem;
+  padding: 1rem 1.5rem;
+  display: flex;
+}
+
+.AILab-module__0w03pW__inputWrapper {
+  background: #ffffff0d;
+  border: 1px solid #ffffff1a;
+  border-radius: .75rem;
+  flex: 1;
+  align-items: center;
+  padding: 0 1rem;
+  transition: all .3s;
+  display: flex;
+}
+
+.AILab-module__0w03pW__inputWrapper:focus-within {
+  background: #ffffff14;
+  border-color: #ccff004d;
+}
+
+.AILab-module__0w03pW__input {
+  color: #fff;
+  background: none;
+  border: none;
+  outline: none;
+  flex: 1;
+  padding: 1rem 0;
+  font-size: .95rem;
+}
+
+.AILab-module__0w03pW__input::placeholder {
+  color: #fff6;
+}
+
+.AILab-module__0w03pW__sendBtn {
+  background: var(--neon-lime);
+  color: #000;
+  cursor: pointer;
+  border: none;
+  border-radius: .75rem;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  transition: all .3s;
+  display: flex;
+}
+
+.AILab-module__0w03pW__sendBtn:hover:not(:disabled) {
+  background: var(--neon-yellow);
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #ccff004d;
+}
+
+.AILab-module__0w03pW__sendBtn:disabled {
+  opacity: .5;
+  cursor: not-allowed;
+}
+
+.AILab-module__0w03pW__spinner {
+  animation: 1s linear infinite AILab-module__0w03pW__spin;
+}
+
+@keyframes AILab-module__0w03pW__spin {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.AILab-module__0w03pW__uploadPanel {
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  display: flex;
+}
+
+.AILab-module__0w03pW__uploadCard {
+  text-align: center;
+  background: #ffffff08;
+  border: 2px dashed #ffffff1a;
+  border-radius: 1.5rem;
+  width: 100%;
+  max-width: 400px;
+  padding: 3rem 2rem;
+  transition: all .3s;
+}
+
+.AILab-module__0w03pW__uploadCard:hover {
+  background: #ccff0005;
+  border-color: #ccff004d;
+}
+
+.AILab-module__0w03pW__uploadIcon {
+  width: 80px;
+  height: 80px;
+  color: var(--neon-lime);
+  background: #ccff001a;
+  border-radius: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 1.5rem;
+  display: flex;
+}
+
+.AILab-module__0w03pW__uploadCard h3 {
+  color: #fff;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.AILab-module__0w03pW__uploadCard p {
+  color: #ffffff80;
+  margin-bottom: 2rem;
+  font-size: .9rem;
+  line-height: 1.6;
+}
+
+.AILab-module__0w03pW__hiddenInput {
+  display: none;
+}
+
+.AILab-module__0w03pW__uploadButton {
+  background: var(--neon-lime);
+  color: #000;
+  cursor: pointer;
+  border: none;
+  border-radius: .75rem;
+  align-items: center;
+  gap: .75rem;
+  padding: 1rem 2rem;
+  font-size: .95rem;
+  font-weight: 700;
+  transition: all .3s;
+  display: inline-flex;
+}
+
+.AILab-module__0w03pW__uploadButton:hover:not(:disabled) {
+  background: var(--neon-yellow);
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px #ccff004d;
+}
+
+.AILab-module__0w03pW__uploadButton:disabled {
+  opacity: .6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 900px) {
+  .AILab-module__0w03pW__dashboard {
+    flex-direction: column;
+    height: auto;
+    min-height: 600px;
+  }
+
+  .AILab-module__0w03pW__sidebar {
+    border-bottom: 1px solid #ffffff14;
+    border-right: none;
+    width: 100%;
+  }
+
+  .AILab-module__0w03pW__sidebarHeader {
+    margin-bottom: 1rem;
+  }
+
+  .AILab-module__0w03pW__moduleList {
+    flex-flow: wrap;
+    gap: .5rem;
+  }
+
+  .AILab-module__0w03pW__moduleButton {
+    flex: 1;
+    min-width: 140px;
+    padding: .75rem;
+  }
+
+  .AILab-module__0w03pW__moduleButtonInfo, .AILab-module__0w03pW__sidebarFooter {
+    display: none;
+  }
+
+  .AILab-module__0w03pW__content {
+    min-height: 400px;
+  }
+
+  .AILab-module__0w03pW__messages {
+    padding: 1rem;
+  }
+
+  .AILab-module__0w03pW__message {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .AILab-module__0w03pW__section {
+    padding: 6rem 1rem;
+  }
+
+  .AILab-module__0w03pW__dashboard {
+    border-radius: 1rem;
+  }
+
+  .AILab-module__0w03pW__uploadCard {
+    padding: 2rem 1.5rem;
+  }
+}
+
+/*# sourceMappingURL=folio-frontend_src_components_AILab_module_css_bad6b30c._.single.css.map*/

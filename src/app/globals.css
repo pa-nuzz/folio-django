@@ -1,0 +1,53 @@
+:root {
+  --neon-lime: #39ff14;
+  --neon-green: #00ff41;
+  --neon-yellow: #ccff00;
+  --bg-dark: #0a0f0a;
+  --bg-darker: #050805;
+  --bg-card: rgba(10, 20, 10, 0.8);
+  --text-gray: rgba(255, 255, 255, 0.6);
+  --text-light: #E0E0E0;
+  --border-dim: rgba(57, 255, 20, 0.1);
+  --caution-yellow: #FFD700;
+  --bg-morph: rgba(57, 255, 20, 0.05);
+  
+  --font-display: 'Inter', sans-serif;
+  --font-sans: 'Inter', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #0a0f0a 0%, #051005 50%, #0a150a 100%);
+  background-attachment: fixed;
+  color: #fff;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  transition: background-color 0.5s ease;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #39ff14 0%, #00ff41 50%, #ccff00 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.grain-overlay {
+  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+* {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}

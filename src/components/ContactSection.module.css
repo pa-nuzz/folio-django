@@ -1,0 +1,471 @@
+.section {
+  padding: 12rem 5% 8rem;
+  background: #000;
+  position: relative;
+  overflow: hidden;
+}
+
+.section::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 10% 90%, rgba(204, 255, 0, 0.05) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 10rem;
+  margin-bottom: 10rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 8px 18px;
+  background: rgba(204, 255, 0, 0.05);
+  color: var(--neon-lime);
+  border: 1px solid rgba(204, 255, 0, 0.2);
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.4em;
+  margin-bottom: 2.5rem;
+  backdrop-filter: blur(10px);
+}
+
+.title {
+  font-size: clamp(3.5rem, 7vw, 5.5rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.05em;
+  margin-bottom: 2rem;
+  color: #fff;
+  line-height: 0.9;
+}
+
+.subtitle {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 1.1rem;
+  margin-bottom: 5rem;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.revealSection {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.revealBtn {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem 2rem;
+  background: linear-gradient(135deg, rgba(204, 255, 0, 0.1) 0%, rgba(204, 255, 0, 0.05) 100%);
+  border: 1px solid rgba(204, 255, 0, 0.3);
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  width: fit-content;
+}
+
+.revealBtn:hover {
+  background: linear-gradient(135deg, rgba(204, 255, 0, 0.2) 0%, rgba(204, 255, 0, 0.1) 100%);
+  border-color: var(--neon-lime);
+  transform: translateX(10px);
+  box-shadow: 0 10px 40px rgba(204, 255, 0, 0.2);
+}
+
+.revealIcon {
+  width: 50px;
+  height: 50px;
+  background: var(--neon-lime);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+}
+
+.revealText {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 0.05em;
+}
+
+.revealArrow {
+  color: var(--neon-lime);
+  transition: transform 0.3s ease;
+}
+
+.revealBtn:hover .revealArrow {
+  transform: translateX(5px);
+}
+
+.revealHint {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+  max-width: 400px;
+  line-height: 1.6;
+}
+
+.formContainer {
+  background: rgba(10, 10, 10, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  backdrop-filter: blur(20px);
+}
+
+.formHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.formHeader h3 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+.closeBtn {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.closeBtn:hover {
+  color: #fff;
+}
+
+.quickContact {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.quickLink {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.quickLink:hover {
+  color: var(--neon-lime);
+}
+
+/* Social Section */
+.socialSection {
+  padding: 2rem 0;
+}
+
+.socialTitle {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.socialDesc {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 2rem;
+}
+
+.socialGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.socialCard {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1rem;
+  text-decoration: none;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.socialCard:hover {
+  background: rgba(204, 255, 0, 0.1);
+  border-color: rgba(204, 255, 0, 0.3);
+  transform: translateY(-3px);
+}
+
+.socialIcon {
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--neon-lime);
+  transition: all 0.3s ease;
+}
+
+.socialCard:hover .socialIcon {
+  background: var(--neon-lime);
+  color: #000;
+}
+
+.socialInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.socialName {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.socialHandle {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.socialCard:hover .socialHandle {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.formActions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.cancelBtn {
+  padding: 1rem 2rem;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cancelBtn:hover {
+  border-color: #fff;
+  color: #fff;
+}
+
+.madeWith {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.inputGroup label {
+  font-size: 0.65rem;
+  font-weight: 900;
+  color: var(--text-gray);
+  letter-spacing: 0.2em;
+}
+
+.inputGroup input, .inputGroup textarea {
+  background: rgba(10, 10, 10, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  color: #fff;
+  font-family: inherit;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  backdrop-filter: blur(10px);
+}
+
+.inputGroup input:focus, .inputGroup textarea:focus {
+  border-color: rgba(204, 255, 0, 0.4);
+  background: rgba(15, 15, 15, 0.6);
+  box-shadow: 0 0 30px rgba(204, 255, 0, 0.1);
+}
+
+.submitBtn {
+  background: var(--neon-lime);
+  color: #000;
+  border: none;
+  padding: 1.5rem 4rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  font-size: 0.8rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  border-radius: 4px;
+  width: fit-content;
+}
+
+.submitBtn:hover {
+  background: #fff;
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(255, 255, 255, 0.1);
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+.successMsg { color: var(--neon-lime); font-size: 0.9rem; font-weight: 700; }
+.errorMsg { color: #ff4444; font-size: 0.9rem; font-weight: 700; }
+
+.infoSide {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.infoLabel {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--text-gray);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  margin-bottom: 1.5rem;
+}
+
+.infoValue {
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.socials {
+  display: flex;
+  gap: 2rem;
+  color: #fff;
+}
+
+.socials a {
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.socials a:hover {
+  color: var(--neon-lime);
+}
+
+.cautionBanner {
+  margin-top: auto;
+  background: #111;
+  border: 1px solid var(--border-dim);
+  padding: 1.5rem;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.stripes {
+  height: 20px;
+  background: repeating-linear-gradient(
+    45deg,
+    #000,
+    #000 10px,
+    var(--neon-lime) 10px,
+    var(--neon-lime) 20px
+  );
+}
+
+.cautionBanner span {
+  font-size: 0.65rem;
+  font-weight: 900;
+  letter-spacing: 0.3em;
+  color: var(--neon-lime);
+}
+
+.footer {
+  padding-top: 4rem;
+  border-top: 1px solid var(--border-dim);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copy {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--text-gray);
+  letter-spacing: 0.1em;
+}
+
+.downloadBtn {
+  background: transparent;
+  color: #fff;
+  border: 1px solid var(--border-dim);
+  padding: 0.8rem 2rem;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.downloadBtn:hover {
+  border-color: #fff;
+}
+
+@media (max-width: 1000px) {
+  .contactGrid {
+    grid-template-columns: 1fr;
+    gap: 5rem;
+  }
+}

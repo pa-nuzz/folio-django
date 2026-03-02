@@ -1,0 +1,194 @@
+/* [project]/folio-frontend/src/components/ServicesSection.module.css [app-client] (css) */
+.ServicesSection-module__w3fvPa__wrapper {
+  z-index: 10;
+  background: #000;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 8rem 5%;
+  display: flex;
+  position: relative;
+}
+
+.ServicesSection-module__w3fvPa__container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.ServicesSection-module__w3fvPa__header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.ServicesSection-module__w3fvPa__badge {
+  color: var(--neon-lime);
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  background: #ccff000d;
+  border: 1px solid #cf03;
+  margin-bottom: 1.5rem;
+  padding: 8px 18px;
+  font-size: .65rem;
+  font-weight: 800;
+  display: inline-block;
+}
+
+.ServicesSection-module__w3fvPa__mainTitle {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -.04em;
+  margin-bottom: 1rem;
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  font-weight: 900;
+}
+
+.ServicesSection-module__w3fvPa__mainSubtitle {
+  color: #fff6;
+  letter-spacing: .1em;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.ServicesSection-module__w3fvPa__cardsContainer {
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  display: grid;
+}
+
+.ServicesSection-module__w3fvPa__card {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background: #0a0a0a99;
+  border: 1px solid #ffffff14;
+  border-radius: 1.5rem;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2.5rem;
+  transition: all .4s cubic-bezier(.16, 1, .3, 1);
+  display: flex;
+}
+
+.ServicesSection-module__w3fvPa__card:hover {
+  background: #0f0f0fcc;
+  border-color: #ccff004d;
+  transform: translateY(-8px);
+  box-shadow: 0 30px 60px #00000080;
+}
+
+.ServicesSection-module__w3fvPa__cardIcon {
+  width: 60px;
+  height: 60px;
+  color: var(--neon-lime);
+  background: #ccff001a;
+  border: 1px solid #ccff004d;
+  border-radius: 1rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.ServicesSection-module__w3fvPa__cardContent {
+  flex-direction: column;
+  gap: 1rem;
+  display: flex;
+}
+
+.ServicesSection-module__w3fvPa__serviceTitle {
+  color: #fff;
+  letter-spacing: -.02em;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.ServicesSection-module__w3fvPa__serviceDesc {
+  color: #ffffff80;
+  font-size: .95rem;
+  line-height: 1.6;
+}
+
+.ServicesSection-module__w3fvPa__tagCloud {
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin-top: auto;
+  padding-top: 1rem;
+  display: flex;
+}
+
+.ServicesSection-module__w3fvPa__tag {
+  color: #fff9;
+  background: #ffffff0d;
+  border: 1px solid #ffffff1a;
+  border-radius: 4px;
+  padding: .4rem .8rem;
+  font-size: .7rem;
+  font-weight: 600;
+  transition: all .3s;
+}
+
+.ServicesSection-module__w3fvPa__card:hover .ServicesSection-module__w3fvPa__tag {
+  color: var(--neon-lime);
+  background: #ccff001a;
+  border-color: #cf03;
+}
+
+.ServicesSection-module__w3fvPa__ctaCard {
+  text-align: center;
+  background: linear-gradient(135deg, #ccff001a 0%, #ccff000d 100%);
+  border-color: #ccff004d;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.ServicesSection-module__w3fvPa__ctaCard:hover {
+  background: linear-gradient(135deg, #cf03 0%, #ccff001a 100%);
+  box-shadow: 0 30px 60px #ccff0026;
+}
+
+.ServicesSection-module__w3fvPa__ctaContent {
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  display: flex;
+}
+
+.ServicesSection-module__w3fvPa__ctaText {
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.ServicesSection-module__w3fvPa__ctaBtn {
+  background: var(--neon-lime);
+  color: #000;
+  border-radius: .75rem;
+  align-items: center;
+  gap: .75rem;
+  padding: 1rem 2rem;
+  font-size: .9rem;
+  font-weight: 800;
+  text-decoration: none;
+  transition: all .3s;
+  display: inline-flex;
+}
+
+.ServicesSection-module__w3fvPa__ctaBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px #ccff004d;
+}
+
+@media (max-width: 768px) {
+  .ServicesSection-module__w3fvPa__cardsContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .ServicesSection-module__w3fvPa__serviceTitle {
+    font-size: 1.5rem;
+  }
+
+  .ServicesSection-module__w3fvPa__ctaText {
+    font-size: 2rem;
+  }
+}
+
+/*# sourceMappingURL=folio-frontend_src_components_ServicesSection_module_css_bad6b30c._.single.css.map*/
