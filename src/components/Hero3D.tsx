@@ -12,37 +12,39 @@ gsap.registerPlugin(ScrollTrigger);
 
 function WireframeObject() {
   const groupRef = useRef<THREE.Group>(null);
+  const frameCount = useRef(0);
 
   useFrame((state) => {
-    if (groupRef.current) {
-      groupRef.current.rotation.y += 0.005;
-      groupRef.current.rotation.x += 0.002;
-      
-      // Smoothly follow mouse with simple lerp for better performance than constant gsap.to
-      const targetX = (state.mouse.y * Math.PI) / 8;
-      const targetY = (state.mouse.x * Math.PI) / 8;
-      
-      groupRef.current.rotation.x = THREE.MathUtils.lerp(groupRef.current.rotation.x, targetX, 0.05);
-      groupRef.current.rotation.y = THREE.MathUtils.lerp(groupRef.current.rotation.y, targetY, 0.05);
-    }
+    if (!groupRef.current) return;
+    
+    // Skip frames for performance (render every 2nd frame)
+    frameCount.current++;
+    if (frameCount.current % 2 !== 0) return;
+    
+    groupRef.current.rotation.y += 0.003;
+    
+    // Smoothly follow mouse with simple lerp
+    const targetX = (state.mouse.y * Math.PI) / 12;
+    const targetY = (state.mouse.x * Math.PI) / 12;
+    
+    groupRef.current.rotation.x = THREE.MathUtils.lerp(groupRef.current.rotation.x, targetX, 0.03);
+    groupRef.current.rotation.y = THREE.MathUtils.lerp(groupRef.current.rotation.y, targetY, 0.03);
   });
 
   return (
-    <Float speed={2} rotationIntensity={0.2} floatIntensity={0.5}>
+    <Float speed={1.5} rotationIntensity={0.1} floatIntensity={0.3}>
       <group ref={groupRef}>
         <mesh>
-          <icosahedronGeometry args={[2.5, 2]} />
-          <meshStandardMaterial 
+          <icosahedronGeometry args={[2.5, 1]} />
+          <meshBasicMaterial 
             color="#00ff00" 
             wireframe={true} 
             transparent={true}
-            opacity={0.4}
-            emissive="#00ff00"
-            emissiveIntensity={0.5}
+            opacity={0.3}
           />
         </mesh>
         <mesh scale={[0.95, 0.95, 0.95]}>
-           <icosahedronGeometry args={[2.5, 2]} />
+           <icosahedronGeometry args={[2.5, 1]} />
            <meshBasicMaterial color="#040406" />
         </mesh>
       </group>

@@ -1,13 +1,12 @@
 "use client";
 import React, { useState } from 'react';
-import { Zap, Send, Mail, MapPin, Globe, Instagram, Linkedin, Github, Download, Loader2 } from 'lucide-react';
+import { Send, Mail, MapPin, Globe, Instagram, Linkedin, Github, Download, Loader2, CheckCircle } from 'lucide-react';
 import styles from './ContactSection.module.css';
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [statusMsg, setStatusMsg] = useState('');
-  const [showForm, setShowForm] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -25,118 +24,145 @@ export default function ContactSection() {
         setStatus('success');
         setStatusMsg(data.message);
         setFormData({ name: '', email: '', message: '' });
+        // Reset after 5 seconds
+        setTimeout(() => setStatus('idle'), 5000);
       } else {
         setStatus('error');
-        setStatusMsg(data.error || 'Uplink failed.');
+        setStatusMsg(data.error || 'Failed to send message.');
       }
     } catch {
       setStatus('error');
-      setStatusMsg('Neural link broken. Please try again.');
+      setStatusMsg('Connection error. Please try again.');
     }
+  };
+
+  const handleResumeDownload = () => {
+    // For now, show a message that resume is coming soon
+    // You can replace this with actual resume file URL
+    alert('Resume download coming soon! Contact me directly for now.');
   };
 
   return (
     <section id="contact" className={styles.section}>
       <div className={styles.container}>
+        <div className={styles.header}>
+          <div className={styles.badge}>GET IN TOUCH</div>
+          <h2 className={styles.title}>Let&apos;s Work <span className="text-gradient">Together</span></h2>
+          <p className={styles.subtitle}>Have a project in mind? Let&apos;s build something amazing.</p>
+        </div>
+
         <div className={styles.contactGrid}>
           {/* Left: Contact Form */}
           <div className={styles.formSide}>
-            <div className={styles.badge}>UPLINK_COMMUNICATION</div>
-            <h2 className={styles.title}>Let&apos;s Join <span className="text-gradient">Forces</span></h2>
-            <p className={styles.subtitle}>Initialize a direct connection to the Monk network.</p>
-            
-            {!showForm ? (
-              <div className={styles.revealTrigger}>
-                <button 
-                  className={styles.revealBtn} 
-                  onClick={() => setShowForm(true)}
-                >
-                  <span className={styles.revealText}>INITIALIZE_UPLINK</span>
-                  <div className={styles.revealCircle}><Zap size={24} /></div>
-                </button>
-                <p className={styles.revealHint}>Click to establish a secure neural connection.</p>
+            <form onSubmit={handleSubmit} className={styles.form}>
+              <div className={styles.inputGroup}>
+                <label htmlFor="name">Your Name</label>
+                <input 
+                  id="name"
+                  type="text" 
+                  placeholder="John Doe" 
+                  required 
+                  value={formData.name}
+                  onChange={e => setFormData({...formData, name: e.target.value})}
+                  disabled={status === 'loading'}
+                />
               </div>
-            ) : (
-              <form onSubmit={handleSubmit} className={`${styles.form} ${styles.fadeIn}`}>
-                <div className={styles.inputGroup}>
-                  <label>IDENTIFIER_NAME</label>
-                  <input 
-                    type="text" 
-                    placeholder="Enter your name" 
-                    required 
-                    value={formData.name}
-                    onChange={e => setFormData({...formData, name: e.target.value})}
-                  />
-                </div>
-                <div className={styles.inputGroup}>
-                  <label>SIGNAL_RETURN_EMAIL</label>
-                  <input 
-                    type="email" 
-                    placeholder="Enter your email" 
-                    required 
-                    value={formData.email}
-                    onChange={e => setFormData({...formData, email: e.target.value})}
-                  />
-                </div>
-                <div className={styles.inputGroup}>
-                  <label>TRANSMISSION_PAYLOAD</label>
-                  <textarea 
-                    placeholder="What's the mission?" 
-                    rows={4} 
-                    required 
-                    value={formData.message}
-                    onChange={e => setFormData({...formData, message: e.target.value})}
-                  ></textarea>
-                </div>
-                
-                <div className={styles.buttonRow}>
-                  <button type="submit" className={styles.submitBtn} disabled={status === 'loading'}>
-                    {status === 'loading' ? <Loader2 className={styles.spinner} /> : <><Send size={18} /> Send Transmission</>}
-                  </button>
-                  <button type="button" className={styles.cancelBtn} onClick={() => setShowForm(false)}>CANCEL_UPLINK</button>
-                </div>
-                
-                {status === 'success' && <p className={styles.successMsg}>{statusMsg}</p>}
-                {status === 'error' && <p className={styles.errorMsg}>{statusMsg}</p>}
-              </form>
-            )}
+              <div className={styles.inputGroup}>
+                <label htmlFor="email">Email Address</label>
+                <input 
+                  id="email"
+                  type="email" 
+                  placeholder="john@example.com" 
+                  required 
+                  value={formData.email}
+                  onChange={e => setFormData({...formData, email: e.target.value})}
+                  disabled={status === 'loading'}
+                />
+              </div>
+              <div className={styles.inputGroup}>
+                <label htmlFor="message">Your Message</label>
+                <textarea 
+                  id="message"
+                  placeholder="Tell me about your project..." 
+                  rows={5} 
+                  required 
+                  value={formData.message}
+                  onChange={e => setFormData({...formData, message: e.target.value})}
+                  disabled={status === 'loading'}
+                ></textarea>
+              </div>
+              
+              <button 
+                type="submit" 
+                className={styles.submitBtn} 
+                disabled={status === 'loading'}
+              >
+                {status === 'loading' ? (
+                  <><Loader2 className={styles.spinner} size={18} /> Sending...</>
+                ) : status === 'success' ? (
+                  <><CheckCircle size={18} /> Sent!</>
+                ) : (
+                  <><Send size={18} /> Send Message</>
+                )}
+              </button>
+              
+              {status === 'success' && (
+                <p className={styles.successMsg}>{statusMsg}</p>
+              )}
+              {status === 'error' && (
+                <p className={styles.errorMsg}>{statusMsg}</p>
+              )}
+            </form>
           </div>
 
           {/* Right: Info */}
           <div className={styles.infoSide}>
-             <div className={styles.infoBlock}>
-               <div className={styles.infoLabel}><Mail size={16} /> DIRECT_CHANNEL</div>
-               <a href="mailto:anuj.paudel061@gmail.com" className={styles.infoValue}>anuj.paudel061@gmail.com</a>
-             </div>
-             <div className={styles.infoBlock}>
-               <div className={styles.infoLabel}><MapPin size={16} /> NEURAL_STATION</div>
-               <div className={styles.infoValue}>Kathmandu, Nepal<br/>Nexus Hub 01</div>
-             </div>
-             <div className={styles.infoBlock}>
-               <div className={styles.infoLabel}><Globe size={16} /> NETWORK</div>
-               <div className={styles.socials}>
-                 <a href="#"><Instagram size={20} /></a>
-                 <a href="#"><Linkedin size={20} /></a>
-                 <a href="https://github.com/pa-nuzz"><Github size={20} /></a>
-               </div>
-             </div>
-             <div className={styles.cautionBanner}>
-                <div className={styles.stripes}></div>
-                <span>CAUTION: DEEP_WORK_IN_PROGRESS</span>
-             </div>
+            <div className={styles.infoBlock}>
+              <div className={styles.infoIcon}><Mail size={20} /></div>
+              <div className={styles.infoContent}>
+                <div className={styles.infoLabel}>Email</div>
+                <a href="mailto:anuj.paudel061@gmail.com" className={styles.infoValue}>anuj.paudel061@gmail.com</a>
+              </div>
+            </div>
+            
+            <div className={styles.infoBlock}>
+              <div className={styles.infoIcon}><MapPin size={20} /></div>
+              <div className={styles.infoContent}>
+                <div className={styles.infoLabel}>Location</div>
+                <div className={styles.infoValue}>Kathmandu, Nepal</div>
+              </div>
+            </div>
+            
+            <div className={styles.infoBlock}>
+              <div className={styles.infoIcon}><Globe size={20} /></div>
+              <div className={styles.infoContent}>
+                <div className={styles.infoLabel}>Social</div>
+                <div className={styles.socials}>
+                  <a href="https://github.com/pa-nuzz" target="_blank" rel="noopener noreferrer">
+                    <Github size={20} />
+                  </a>
+                  <a href="#" target="_blank" rel="noopener noreferrer">
+                    <Linkedin size={20} />
+                  </a>
+                  <a href="#" target="_blank" rel="noopener noreferrer">
+                    <Instagram size={20} />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <button 
+              className={styles.downloadBtn}
+              onClick={handleResumeDownload}
+            >
+              <Download size={18} /> Download Resume
+            </button>
           </div>
         </div>
 
         {/* Footer */}
         <footer className={styles.footer}>
-          <div className={styles.footerLeft}>
-            <span className={styles.copy}>© 2026 ANUZ DON. ALL RIGHTS RESERVED.</span>
-          </div>
-          <div className={styles.footerRight}>
-            <button className={styles.downloadBtn}>
-              <Download size={16} /> Get Resume
-            </button>
-          </div>
+          <span className={styles.copy}>© 2026 Anuj Don. All rights reserved.</span>
         </footer>
       </div>
     </section>

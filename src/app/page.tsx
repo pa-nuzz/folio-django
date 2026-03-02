@@ -12,11 +12,14 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(ScrollTrigger);
+// Register GSAP plugins once
+if (typeof window !== 'undefined') {
+  gsap.registerPlugin(ScrollTrigger);
+}
 
 export default function Home() {
   useGSAP(() => {
-    // Global Scroll-Triggered Atmosphere
+    // Global Scroll-Triggered Atmosphere - simplified
     gsap.to("main", {
       scrollTrigger: {
         trigger: "main",
@@ -24,19 +27,7 @@ export default function Home() {
         end: "bottom bottom",
         scrub: true,
       },
-      "--bg-morph": "rgba(204, 255, 0, 0.02)", // Subtle Cyber Lime tint shift
-      ease: "none"
-    });
-
-    // Grain Intensity Shift
-    gsap.to(".grain-overlay", {
-      scrollTrigger: {
-        trigger: "main",
-        start: "top top",
-        end: "bottom bottom",
-        scrub: true,
-      },
-      opacity: 0.08,
+      "--bg-morph": "rgba(204, 255, 0, 0.02)",
       ease: "none"
     });
   });

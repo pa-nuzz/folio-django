@@ -1,181 +1,289 @@
 .section {
-  padding: 8rem 5%;
+  min-height: 100vh;
   background: var(--bg-dark);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
 }
 
-.container {
-  max-width: 1400px;
-  margin: 0 auto;
+.loaderContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  gap: 1.5rem;
+  color: var(--neon-lime);
+}
+
+.spinner {
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 .header {
-  margin-bottom: 5rem;
+  padding: 6rem 5% 3rem;
   text-align: center;
 }
 
 .badge {
   display: inline-block;
-  padding: 4px 12px;
+  padding: 8px 18px;
   background: rgba(255, 255, 255, 0.05);
-  border: 1px solid var(--border-dim);
+  border: 1px solid rgba(204, 255, 0, 0.3);
+  color: var(--neon-lime);
   font-size: 0.65rem;
   font-weight: 800;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
   margin-bottom: 1.5rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px rgba(204, 255, 0, 0.1);
 }
 
 .title {
   font-size: clamp(2.5rem, 4vw, 3.5rem);
+  color: #fff;
   margin-bottom: 1rem;
+  font-weight: 900;
 }
 
 .subtitle {
-  color: var(--text-gray);
+  color: rgba(255, 255, 255, 0.5);
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 0.25em;
   font-weight: 600;
 }
 
-.repoList {
+.trackContainer {
+  flex: 1;
+  overflow: hidden;
+}
+
+.track {
+  display: flex;
+  height: 70vh;
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+
+/* Intro Slide */
+.introSlide {
+  min-width: 40vw;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 4rem;
+  margin-right: 2rem;
+}
+
+.slideTitle {
+  font-size: clamp(2rem, 3vw, 3rem);
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.slideSubtitle {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.6;
+}
+
+/* Repo Slide */
+.repoSlide {
+  min-width: 450px;
+  max-width: 500px;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.repoCard {
+  background: rgba(10, 10, 10, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1rem;
+  padding: 2.5rem;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  backdrop-filter: blur(10px);
+  height: fit-content;
 }
 
-.repoItem {
-  background: rgba(10, 10, 10, 0.4);
-  background-image: linear-gradient(90deg, rgba(204, 255, 0, 0.02) 0%, transparent 100%);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  padding: 2rem 3rem;
-  text-decoration: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
-  border-radius: 8px;
+.repoCard:hover {
+  background: rgba(20, 20, 20, 0.7);
+  border-color: rgba(204, 255, 0, 0.3);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+  transform: translateY(-8px);
 }
 
-.repoItem:hover {
-  background: rgba(204, 255, 0, 0.05);
-  border-color: rgba(204, 255, 0, 0.4);
-  transform: translateX(10px);
-  box-shadow: -10px 0 30px rgba(204, 255, 0, 0.05);
-}
-
-.repoMain {
-  display: flex;
-  gap: 2.5rem;
-  align-items: center;
-  flex: 1;
-}
-
-.repoIcon {
-  width: 3.5rem;
-  height: 3.5rem;
-  background: rgba(255, 255, 255, 0.03);
+.repoIconLarge {
+  width: 60px;
+  height: 60px;
+  background: rgba(204, 255, 0, 0.1);
+  border: 1px solid rgba(204, 255, 0, 0.3);
+  border-radius: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--neon-lime);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: 50%;
-  transition: all 0.4s ease;
 }
 
-.repoItem:hover .repoIcon {
-  background: var(--neon-lime);
-  color: #000;
-  box-shadow: 0 0 20px var(--neon-lime);
+.repoContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
-.repoInfo {
-  max-width: 600px;
+.repoNumber {
+  font-size: 0.7rem;
+  font-weight: 900;
+  color: var(--neon-lime);
+  letter-spacing: 0.1em;
 }
 
 .repoName {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   color: #fff;
   font-weight: 800;
-  margin-bottom: 0.5rem;
   letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
 }
 
 .repoDesc {
-  color: rgba(255, 255, 255, 0.4);
   font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.5);
   line-height: 1.5;
 }
 
-.repoMeta {
+.repoStats {
   display: flex;
-  gap: 4rem;
-  align-items: center;
+  gap: 1.5rem;
+  padding: 1.25rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.metaBox {
+.stat {
   display: flex;
   flex-direction: column;
+  gap: 0.25rem;
+}
+
+.statLabel {
+  font-size: 0.6rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.4);
+  letter-spacing: 0.1em;
+}
+
+.statValue {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #fff;
+  display: flex;
+  align-items: center;
   gap: 0.4rem;
 }
 
-.metaLabel {
-  font-size: 0.55rem;
-  font-weight: 900;
-  color: var(--text-gray);
-  letter-spacing: 0.2em;
-}
-
-.metaValue {
-  font-size: 0.85rem;
-  color: #fff;
-  font-weight: 800;
-  display: flex;
+.repoLink {
+  display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-}
-
-.external {
-  color: rgba(255, 255, 255, 0.2);
-  margin-left: 2rem;
-  transition: all 0.3s ease;
-}
-
-.repoItem:hover .external {
-  color: #fff;
-  transform: scale(1.2);
-}
-
-.moreRepos {
-  margin-top: 5rem;
-  display: flex;
-  justify-content: center;
-}
-
-.ghostBtn {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  background: transparent;
-  color: #fff;
-  border: 1px solid var(--border-dim);
-  padding: 1.2rem 3rem;
+  background: var(--neon-lime);
+  color: #000;
+  padding: 0.75rem 1.25rem;
   text-decoration: none;
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.2em;
-  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  font-size: 0.75rem;
+  border-radius: 0.5rem;
   transition: all 0.3s ease;
+  margin-top: 0.5rem;
+  width: fit-content;
 }
 
-.ghostBtn:hover {
-  border-color: #fff;
-  background: #fff;
-  color: #000;
+.repoLink:hover {
+  background: var(--neon-yellow);
+  box-shadow: 0 0 20px rgba(204, 255, 0, 0.3);
+  transform: translateX(4px);
 }
 
-@media (max-width: 700px) {
-  .grid {
-    grid-template-columns: 1fr;
+/* Final Slide */
+.finalSlide {
+  min-width: 40vw;
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem;
+}
+
+.viewAllLink {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 3rem;
+  background: rgba(10, 10, 10, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(10px);
+}
+
+.viewAllLink:hover {
+  background: rgba(20, 20, 20, 0.7);
+  border-color: rgba(204, 255, 0, 0.3);
+  transform: translateY(-8px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+}
+
+.viewAllLink span {
+  font-size: 1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .track {
+    flex-direction: column;
+    height: auto;
+    padding: 2rem 5%;
+    gap: 2rem;
+  }
+
+  .introSlide,
+  .repoSlide,
+  .finalSlide {
+    min-width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .repoCard {
+    padding: 2rem;
+  }
+
+  .repoSlide {
+    align-items: stretch;
   }
 }
+
