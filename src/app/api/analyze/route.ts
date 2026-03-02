@@ -1,5 +1,4 @@
 import { NextResponse } from 'next/server';
-import OpenAI from 'openai';
 import mammoth from 'mammoth';
 import { createWorker } from 'tesseract.js';
 import { RateLimiterMemory } from 'rate-limiter-flexible';
@@ -7,10 +6,10 @@ import { RateLimiterMemory } from 'rate-limiter-flexible';
 // Force static export for this API route
 export const dynamic = 'force-static';
 
-// Security: Rate limiter - 5 requests per 10 minutes per IP
+// Security: Rate limiter - 10 requests per 10 minutes per IP (higher for local Ollama)
 const rateLimiter = new RateLimiterMemory({
   keyPrefix: 'analyze_api',
-  points: 5,
+  points: 10,
   duration: 600, // 10 minutes
 });
 
@@ -21,9 +20,8 @@ const MAX_FILE_SIZE = 10 * 1024 * 1024;
 const ALLOWED_RESUME_TYPES = ['.pdf', '.docx', '.doc', '.txt'];
 const ALLOWED_IMAGE_TYPES = ['image/jpeg', 'image/png', 'image/jpg', 'image/webp'];
 
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
+// Ollama API endpoint - runs locally for unlimited free AI
+const OLLAMA_URL = process.env.OLLAMA_URL || 'http://localhost:11434';
 
 // Use require for pdf-parse (CommonJS module)
 let pdfParse: any;
@@ -31,6 +29,39 @@ try {
   pdfParse = require('pdf-parse');
 } catch (e) {
   console.warn('pdf-parse not available');
+}
+
+// Helper function to call Ollama
+async function callOllama(systemPrompt: string, userContent: string): Promise<string> {
+  try {
+    const response = await fetch(`${OLLAMA_URL}/api/chat`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        model: 'mistral',
+        messages: [
+          { role: 'system', content: systemPrompt },
+          { role: 'user', content: userContent }
+        ],
+        stream: false,
+        options: {
+          temperature: 0.7,
+          num_predict: 800,
+        }
+      }),
+    });
+
+    if (!response.ok) {
+      throw new Error(`Ollama API error: ${response.status}`);
+    }
+
+    const data = await response.json();
+    return data.message?.content || 'Analysis unavailable';
+  } catch (error) {
+    console.error('Ollama call failed:', error);
+    // Return fallback analysis
+    return 'AI analysis unavailable. Ollama may not be running. To use this feature, install Ollama locally and run: ollama pull mistral';
+  }
 }
 
 export async function POST(req: Request) {
@@ -107,24 +138,11 @@ export async function POST(req: Request) {
         // Security: Limit text length sent to API
         const limitedText = extractedText.substring(0, 4000);
 
-        // Use OpenAI to analyze the resume
-        const completion = await openai.chat.completions.create({
-          model: 'gpt-3.5-turbo',
-          messages: [
-            {
-              role: 'system',
-              content: `You are an expert resume analyzer. Provide concise, actionable feedback.`
-            },
-            {
-              role: 'user',
-              content: `Analyze this resume:\n\n${limitedText}`
-            }
-          ],
-          temperature: 0.7,
-          max_tokens: 800,
-        });
-
-        analysisResult = completion.choices[0]?.message?.content || 'Analysis unavailable';
+        // Use Ollama to analyze the resume
+        analysisResult = await callOllama(
+          'You are an expert resume analyzer. Provide concise, actionable feedback on strengths, improvements, and recommendations. Format with bullet points.',
+          `Analyze this resume:\n\n${limitedText}`
+        );
 
       } else if (type === 'ocr') {
         // Security: Validate image file type
@@ -153,24 +171,11 @@ export async function POST(req: Request) {
         // Security: Limit text length
         const limitedText = extractedText.substring(0, 3000);
 
-        // Use OpenAI to analyze the extracted text
-        const completion = await openai.chat.completions.create({
-          model: 'gpt-3.5-turbo',
-          messages: [
-            {
-              role: 'system',
-              content: 'Analyze OCR extracted text briefly.'
-            },
-            {
-              role: 'user',
-              content: `Text: ${limitedText}`
-            }
-          ],
-          temperature: 0.5,
-          max_tokens: 500,
-        });
-
-        analysisResult = completion.choices[0]?.message?.content || extractedText;
+        // Use Ollama to analyze the extracted text
+        analysisResult = await callOllama(
+          'Analyze OCR extracted text briefly. Summarize what was found and any key insights.',
+          `Text: ${limitedText}`
+        );
       }
 
       return NextResponse.json({ 

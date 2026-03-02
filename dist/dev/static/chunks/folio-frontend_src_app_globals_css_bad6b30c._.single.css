@@ -1,0 +1,52 @@
+/* [project]/folio-frontend/src/app/globals.css [app-client] (css) */
+:root {
+  --neon-lime: #cf0;
+  --neon-yellow: #f4ff00;
+  --bg-dark: #000;
+  --bg-darker: #050505;
+  --bg-card: #0f0f0fcc;
+  --text-gray: #ffffff80;
+  --text-light: #e0e0e0;
+  --border-dim: #ffffff0d;
+  --caution-yellow: gold;
+  --bg-morph: #0000;
+  --font-display: "Inter", sans-serif;
+  --font-sans: "Inter", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg-dark);
+  background-image: radial-gradient(circle at 50% 50%, var(--bg-morph) 0%, transparent 100%);
+  color: #fff;
+  font-family: var(--font-sans);
+  transition: background-color .5s;
+  overflow-x: hidden;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #fff 0%, var(--neon-lime) 100%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.grain-overlay {
+  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/*# sourceMappingURL=folio-frontend_src_app_globals_css_bad6b30c._.single.css.map*/

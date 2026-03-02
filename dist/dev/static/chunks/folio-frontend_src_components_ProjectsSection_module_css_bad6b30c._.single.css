@@ -1,0 +1,406 @@
+/* [project]/folio-frontend/src/components/ProjectsSection.module.css [app-client] (css) */
+.ProjectsSection-module__MQyIiq__section {
+  background-color: #000;
+  flex-direction: column;
+  height: 100vh;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.ProjectsSection-module__MQyIiq__header {
+  z-index: 20;
+  pointer-events: none;
+  border-left: 2px solid var(--accent-primary);
+  padding-left: 3rem;
+  position: absolute;
+  top: 6rem;
+  left: 6rem;
+}
+
+.ProjectsSection-module__MQyIiq__header:after {
+  content: "";
+  background: repeating-linear-gradient(45deg, var(--accent-primary), var(--accent-primary) 2px, transparent 2px, transparent 4px);
+  width: 10px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.ProjectsSection-module__MQyIiq__badge {
+  font-size: .7rem;
+  font-family: var(--font-display);
+  letter-spacing: .4em;
+  text-transform: uppercase;
+  color: var(--accent-primary);
+  background: #ccff000d;
+  border: 1px solid #cf03;
+  border-radius: 2px;
+  margin-bottom: 2rem;
+  padding: .5rem 1.5rem;
+  font-weight: 800;
+  display: inline-block;
+}
+
+.ProjectsSection-module__MQyIiq__title {
+  color: #fff;
+  letter-spacing: -.04em;
+  font-size: clamp(3rem, 6vw, 4.5rem);
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.ProjectsSection-module__MQyIiq__loaderContainer {
+  height: 100%;
+  color: var(--accent-primary);
+  font-family: var(--font-display);
+  letter-spacing: .2em;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  font-size: .8rem;
+  font-weight: 900;
+  display: flex;
+}
+
+.ProjectsSection-module__MQyIiq__spinner {
+  filter: drop-shadow(0 0 10px var(--accent-glow));
+  animation: 2s linear infinite ProjectsSection-module__MQyIiq__spin;
+}
+
+@keyframes ProjectsSection-module__MQyIiq__spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.ProjectsSection-module__MQyIiq__trackContainer {
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+}
+
+.ProjectsSection-module__MQyIiq__trackContainer:before {
+  content: "";
+  pointer-events: none;
+  background-image: radial-gradient(#ccff0005 1px, #0000 1px);
+  background-size: 40px 40px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.ProjectsSection-module__MQyIiq__track {
+  will-change: transform;
+  align-items: center;
+  gap: 6vw;
+  height: 65vh;
+  padding-left: 25vw;
+  padding-right: 25vw;
+  display: flex;
+}
+
+.ProjectsSection-module__MQyIiq__introSlide {
+  min-width: 450px;
+  padding-right: 6rem;
+}
+
+.ProjectsSection-module__MQyIiq__slideTitle {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -.05em;
+  margin-bottom: 2rem;
+  font-size: 4.5rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.ProjectsSection-module__MQyIiq__slideSubtitle {
+  color: var(--accent-primary);
+  text-transform: uppercase;
+  letter-spacing: .3em;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.ProjectsSection-module__MQyIiq__projectSlide {
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  background: #0a0a0a66;
+  border: 1px solid #ffffff0d;
+  min-width: 80vw;
+  max-width: 1400px;
+  height: 100%;
+  transition: all .6s cubic-bezier(.16, 1, .3, 1);
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 40px 150px #000c;
+}
+
+.ProjectsSection-module__MQyIiq__projectSlide:hover {
+  background: #0f0f0f99;
+  border-color: #ccff004d;
+  transform: scale(1.02);
+}
+
+.ProjectsSection-module__MQyIiq__imageWrapper {
+  clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+  flex: 1.6;
+  position: relative;
+  overflow: hidden;
+}
+
+.ProjectsSection-module__MQyIiq__projectImage {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: transform 1.2s var(--ease-out);
+  filter: saturate(.2) brightness(.6);
+}
+
+.ProjectsSection-module__MQyIiq__projectSlide:hover .ProjectsSection-module__MQyIiq__projectImage {
+  filter: saturate() brightness();
+  transform: scale(1.1)rotate(1deg);
+}
+
+.ProjectsSection-module__MQyIiq__imageOverlay {
+  pointer-events: none;
+  background: linear-gradient(to right, #0006 0%, #0000 50%, #000 100%);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.ProjectsSection-module__MQyIiq__projectInfo {
+  z-index: 2;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  margin-left: -5%;
+  padding: 6rem;
+  display: flex;
+  position: relative;
+}
+
+.ProjectsSection-module__MQyIiq__projectNumber {
+  color: #ccff000d;
+  pointer-events: none;
+  font-size: 15rem;
+  font-weight: 950;
+  line-height: 1;
+  position: absolute;
+  top: -2rem;
+  right: -2rem;
+}
+
+.ProjectsSection-module__MQyIiq__projectTitle {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -.04em;
+  margin-bottom: 2rem;
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.ProjectsSection-module__MQyIiq__projectDesc {
+  color: #ffffff80;
+  max-width: 450px;
+  margin-bottom: 4rem;
+  font-size: 1.15rem;
+  line-height: 1.6;
+}
+
+.ProjectsSection-module__MQyIiq__techStack {
+  flex-wrap: wrap;
+  gap: .8rem;
+  margin-bottom: 5rem;
+  display: flex;
+}
+
+.ProjectsSection-module__MQyIiq__techBadge {
+  color: #fff;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  background: #ffffff08;
+  border: 1px solid #ffffff1a;
+  padding: .6rem 1.4rem;
+  font-size: .7rem;
+  font-weight: 800;
+}
+
+.ProjectsSection-module__MQyIiq__projectLinks {
+  gap: 2.5rem;
+  display: flex;
+}
+
+.ProjectsSection-module__MQyIiq__btnPrimary {
+  background: var(--neon-lime);
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: .25em;
+  transition: all .4s var(--ease-out);
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.4rem 3rem;
+  font-size: .75rem;
+  font-weight: 900;
+  display: inline-flex;
+}
+
+.ProjectsSection-module__MQyIiq__btnPrimary:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px #ccff004d;
+}
+
+.ProjectsSection-module__MQyIiq__btnSecondary {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: .25em;
+  transition: all .4s var(--ease-out);
+  background: none;
+  border: 1px solid #ffffff1a;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.4rem 3rem;
+  font-size: .75rem;
+  font-weight: 800;
+  display: inline-flex;
+}
+
+.ProjectsSection-module__MQyIiq__btnSecondary:hover {
+  background: #ffffff0d;
+  border-color: #fff;
+  transform: translateY(-8px);
+}
+
+.ProjectsSection-module__MQyIiq__githubSlide {
+  justify-content: center;
+  align-items: center;
+  min-width: 60vw;
+  height: 100%;
+  padding-left: 5vw;
+  display: flex;
+}
+
+.ProjectsSection-module__MQyIiq__githubContent {
+  width: 100%;
+}
+
+.ProjectsSection-module__MQyIiq__githubContent h3 {
+  color: #fff;
+  font-size: 4rem;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  font-weight: 900;
+}
+
+.ProjectsSection-module__MQyIiq__githubContent p {
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  margin-bottom: 4rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.ProjectsSection-module__MQyIiq__githubGrid {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  display: grid;
+}
+
+.ProjectsSection-module__MQyIiq__githubCard {
+  border: 1px solid var(--bg-panel-border);
+  transition: all .5s var(--ease-out);
+  cursor: pointer;
+  background: #0a0a0a;
+  border-radius: 4px;
+  padding: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.ProjectsSection-module__MQyIiq__githubCard:hover {
+  border-color: var(--accent-primary);
+  box-shadow: 0 30px 60px #000c, 0 0 40px var(--accent-glow);
+  transform: translateY(-8px);
+}
+
+.ProjectsSection-module__MQyIiq__ghIcon {
+  color: var(--accent-primary);
+  margin-bottom: 1.5rem;
+  transition: all .3s;
+}
+
+.ProjectsSection-module__MQyIiq__githubCard h4 {
+  color: #fff;
+  font-size: 1.5rem;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  font-weight: 900;
+}
+
+.ProjectsSection-module__MQyIiq__githubCard p {
+  color: #888;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.ProjectsSection-module__MQyIiq__repoStats {
+  color: #444;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  justify-content: space-between;
+  font-size: .8rem;
+  font-weight: 900;
+  display: flex;
+}
+
+.ProjectsSection-module__MQyIiq__lang {
+  color: var(--accent-primary);
+}
+
+@media (max-width: 1000px) {
+  .ProjectsSection-module__MQyIiq__header {
+    top: 3rem;
+    left: 3rem;
+  }
+
+  .ProjectsSection-module__MQyIiq__track {
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
+
+  .ProjectsSection-module__MQyIiq__projectSlide {
+    flex-direction: column;
+    min-width: 90vw;
+  }
+
+  .ProjectsSection-module__MQyIiq__projectInfo {
+    padding: 3rem;
+  }
+
+  .ProjectsSection-module__MQyIiq__imageOverlay {
+    background: linear-gradient(#0000 40%, #080808 100%);
+  }
+
+  .ProjectsSection-module__MQyIiq__githubGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*# sourceMappingURL=folio-frontend_src_components_ProjectsSection_module_css_bad6b30c._.single.css.map*/

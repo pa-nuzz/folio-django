@@ -1,20 +1,18 @@
 import { NextResponse } from 'next/server';
-import OpenAI from 'openai';
 import { RateLimiterMemory } from 'rate-limiter-flexible';
 
 // Force static export for this API route
 export const dynamic = 'force-static';
 
-// Initialize rate limiter: 10 requests per minute per IP
+// Initialize rate limiter: 30 requests per minute per IP (higher for local Ollama)
 const rateLimiter = new RateLimiterMemory({
   keyPrefix: 'chat_api',
-  points: 10,
+  points: 30,
   duration: 60,
 });
 
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
+// Ollama API endpoint - runs locally for unlimited free AI
+const OLLAMA_URL = process.env.OLLAMA_URL || 'http://localhost:11434';
 
 // Security: Input sanitization function
 function sanitizeInput(input: string): string {
@@ -83,25 +81,52 @@ Guidelines:
 - Keep responses under 3-4 sentences for chat interface`;
 
     try {
-      const completion = await openai.chat.completions.create({
-        model: 'gpt-3.5-turbo',
-        messages: [
-          { role: 'system', content: systemPrompt },
-          ...sanitizedMessages
-        ],
-        temperature: 0.7,
-        max_tokens: 500,
+      // Try Ollama first for unlimited free AI
+      const response = await fetch(`${OLLAMA_URL}/api/chat`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          model: 'mistral', // or 'llama2', 'codellama', 'neural-chat' depending on what's installed
+          messages: [
+            { role: 'system', content: systemPrompt },
+            ...sanitizedMessages
+          ],
+          stream: false,
+          options: {
+            temperature: 0.7,
+            num_predict: 500,
+          }
+        }),
       });
 
-      const reply = completion.choices[0]?.message?.content || "I'm experiencing a temporary glitch. Please try again.";
+      if (!response.ok) {
+        throw new Error(`Ollama API error: ${response.status}`);
+      }
+
+      const data = await response.json();
+      const reply = data.message?.content || "I'm experiencing a temporary glitch. Please try again.";
 
       return NextResponse.json({ reply });
-    } catch (apiError: any) {
-      console.error('OpenAI API Error:', apiError);
+    } catch (ollamaError) {
+      console.error('Ollama API Error:', ollamaError);
       
-      // Generic fallback without exposing internal details
+      // Fallback: Use rule-based responses when Ollama is unavailable
+      const lastMessage = sanitizedMessages[sanitizedMessages.length - 1]?.content?.toLowerCase() || '';
+      
+      let fallbackReply = "I'm currently offline. Please make sure Ollama is running locally with the Mistral model installed. Run: ollama pull mistral";
+      
+      if (lastMessage.includes('hello') || lastMessage.includes('hi')) {
+        fallbackReply = "Hello! I'm Monk, Anuj's AI assistant. I'd be happy to help, but please ensure Ollama is running locally for the best experience.";
+      } else if (lastMessage.includes('anuj') || lastMessage.includes('portfolio')) {
+        fallbackReply = "Anuj Don is a Full-Stack Developer & AI Specialist. He builds scalable web applications using React, Next.js, TypeScript, and Python. Check out his projects section for more details!";
+      } else if (lastMessage.includes('contact') || lastMessage.includes('email')) {
+        fallbackReply = "You can reach Anuj at anuj.paudel061@gmail.com or through the contact form on this website.";
+      } else if (lastMessage.includes('skill') || lastMessage.includes('tech')) {
+        fallbackReply = "Anuj specializes in React, Next.js, TypeScript, Node.js, Python, Django, FastAPI, PostgreSQL, and AI integration with LLMs.";
+      }
+      
       return NextResponse.json({ 
-        reply: "I'm currently experiencing high demand. Please try again in a moment." 
+        reply: fallbackReply
       });
     }
   } catch (error) {

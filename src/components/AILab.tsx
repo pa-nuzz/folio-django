@@ -166,6 +166,10 @@ export default function AILab() {
   const renderMessage = (msg: Message, idx: number) => {
     const isAi = msg.role === 'ai';
     const isSystem = msg.role === 'system';
+    // Use a fixed timestamp to avoid hydration mismatch
+    const timeStr = typeof window !== 'undefined' 
+      ? new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+      : '00:00';
     
     return (
       <div key={idx} className={`${styles.message} ${isAi ? styles.aiMessage : isSystem ? styles.systemMessage : styles.userMessage}`}>
@@ -177,7 +181,7 @@ export default function AILab() {
             {isAi ? 'Monk AI' : isSystem ? 'System' : 'You'}
           </span>
           <span className={styles.messageTime}>
-            {new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+            {timeStr}
           </span>
         </div>
         <div className={styles.messageContent}>
@@ -262,7 +266,7 @@ export default function AILab() {
                 </div>
                 <div className={styles.stat}>
                   <CheckCircle size={12} />
-                  <span>GPT-3.5 Turbo</span>
+                  <span>Mistral (Ollama)</span>
                 </div>
               </div>
             </div>

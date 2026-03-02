@@ -61,9 +61,14 @@ export default function Navbar() {
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+    if (href === '/') {
+      // Scroll to top for home/logo click
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
     setMobileMenuOpen(false);
   };
@@ -86,7 +91,7 @@ export default function Navbar() {
 
         {/* Center: Logo */}
         <div className={styles.center}>
-          <Link href="/" className={styles.logoLink}>
+          <Link href="/" className={styles.logoLink} onClick={(e) => handleNavClick(e, '/')}>
             <div className={styles.logoWrapper}>
               <Image 
                 src="/logo.png" 

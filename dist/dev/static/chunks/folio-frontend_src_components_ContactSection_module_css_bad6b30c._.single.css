@@ -1,0 +1,481 @@
+/* [project]/folio-frontend/src/components/ContactSection.module.css [app-client] (css) */
+.ContactSection-module__DXGP8q__section {
+  background: #000;
+  padding: 12rem 5% 8rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.ContactSection-module__DXGP8q__section:before {
+  content: "";
+  pointer-events: none;
+  background: radial-gradient(circle at 10% 90%, #ccff000d 0%, #0000 60%);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.ContactSection-module__DXGP8q__container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.ContactSection-module__DXGP8q__contactGrid {
+  grid-template-columns: 1.5fr 1fr;
+  gap: 10rem;
+  margin-bottom: 10rem;
+  display: grid;
+}
+
+.ContactSection-module__DXGP8q__badge {
+  color: var(--neon-lime);
+  letter-spacing: .4em;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background: #ccff000d;
+  border: 1px solid #cf03;
+  margin-bottom: 2.5rem;
+  padding: 8px 18px;
+  font-size: .65rem;
+  font-weight: 800;
+  display: inline-block;
+}
+
+.ContactSection-module__DXGP8q__title {
+  text-transform: uppercase;
+  letter-spacing: -.05em;
+  color: #fff;
+  margin-bottom: 2rem;
+  font-size: clamp(3.5rem, 7vw, 5.5rem);
+  font-weight: 900;
+  line-height: .9;
+}
+
+.ContactSection-module__DXGP8q__subtitle {
+  color: #fff6;
+  letter-spacing: .02em;
+  margin-bottom: 5rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.ContactSection-module__DXGP8q__form {
+  flex-direction: column;
+  gap: 2.5rem;
+  display: flex;
+}
+
+.ContactSection-module__DXGP8q__revealSection {
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 0;
+  display: flex;
+}
+
+.ContactSection-module__DXGP8q__revealBtn {
+  cursor: pointer;
+  background: linear-gradient(135deg, #ccff001a 0%, #ccff000d 100%);
+  border: 1px solid #ccff004d;
+  border-radius: 1rem;
+  align-items: center;
+  gap: 1.5rem;
+  width: fit-content;
+  padding: 1.5rem 2rem;
+  transition: all .4s cubic-bezier(.16, 1, .3, 1);
+  display: flex;
+}
+
+.ContactSection-module__DXGP8q__revealBtn:hover {
+  border-color: var(--neon-lime);
+  background: linear-gradient(135deg, #cf03 0%, #ccff001a 100%);
+  transform: translateX(10px);
+  box-shadow: 0 10px 40px #cf03;
+}
+
+.ContactSection-module__DXGP8q__revealIcon {
+  background: var(--neon-lime);
+  color: #000;
+  border-radius: 12px;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  display: flex;
+}
+
+.ContactSection-module__DXGP8q__revealText {
+  color: #fff;
+  letter-spacing: .05em;
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.ContactSection-module__DXGP8q__revealArrow {
+  color: var(--neon-lime);
+  transition: transform .3s;
+}
+
+.ContactSection-module__DXGP8q__revealBtn:hover .ContactSection-module__DXGP8q__revealArrow {
+  transform: translateX(5px);
+}
+
+.ContactSection-module__DXGP8q__revealHint {
+  color: #ffffff80;
+  max-width: 400px;
+  font-size: .85rem;
+  line-height: 1.6;
+}
+
+.ContactSection-module__DXGP8q__formContainer {
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  background: #0a0a0acc;
+  border: 1px solid #ffffff1a;
+  border-radius: 1.5rem;
+  padding: 2rem;
+}
+
+.ContactSection-module__DXGP8q__formHeader {
+  border-bottom: 1px solid #ffffff1a;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  display: flex;
+}
+
+.ContactSection-module__DXGP8q__formHeader h3 {
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+
+.ContactSection-module__DXGP8q__closeBtn {
+  color: #fff9;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: .5rem;
+  transition: color .3s;
+}
+
+.ContactSection-module__DXGP8q__closeBtn:hover {
+  color: #fff;
+}
+
+.ContactSection-module__DXGP8q__quickContact {
+  border-top: 1px solid #ffffff1a;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  display: flex;
+}
+
+.ContactSection-module__DXGP8q__quickLink {
+  color: #ffffffb3;
+  align-items: center;
+  gap: 1rem;
+  font-size: .9rem;
+  text-decoration: none;
+  transition: color .3s;
+  display: flex;
+}
+
+.ContactSection-module__DXGP8q__quickLink:hover {
+  color: var(--neon-lime);
+}
+
+.ContactSection-module__DXGP8q__socialSection {
+  padding: 2rem 0;
+}
+
+.ContactSection-module__DXGP8q__socialTitle {
+  color: #fff;
+  margin-bottom: .5rem;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.ContactSection-module__DXGP8q__socialDesc {
+  color: #ffffff80;
+  margin-bottom: 2rem;
+  font-size: .9rem;
+}
+
+.ContactSection-module__DXGP8q__socialGrid {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  display: grid;
+}
+
+.ContactSection-module__DXGP8q__socialCard {
+  background: #ffffff08;
+  border: 1px solid #ffffff14;
+  border-radius: 1rem;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem;
+  text-decoration: none;
+  transition: all .4s cubic-bezier(.16, 1, .3, 1);
+  display: flex;
+}
+
+.ContactSection-module__DXGP8q__socialCard:hover {
+  background: #ccff001a;
+  border-color: #ccff004d;
+  transform: translateY(-3px);
+}
+
+.ContactSection-module__DXGP8q__socialIcon {
+  width: 48px;
+  height: 48px;
+  color: var(--neon-lime);
+  background: #ffffff0d;
+  border-radius: 12px;
+  justify-content: center;
+  align-items: center;
+  transition: all .3s;
+  display: flex;
+}
+
+.ContactSection-module__DXGP8q__socialCard:hover .ContactSection-module__DXGP8q__socialIcon {
+  background: var(--neon-lime);
+  color: #000;
+}
+
+.ContactSection-module__DXGP8q__socialInfo {
+  flex-direction: column;
+  gap: .25rem;
+  display: flex;
+}
+
+.ContactSection-module__DXGP8q__socialName {
+  color: #fff;
+  font-size: .9rem;
+  font-weight: 700;
+}
+
+.ContactSection-module__DXGP8q__socialHandle {
+  color: #ffffff80;
+  font-size: .75rem;
+}
+
+.ContactSection-module__DXGP8q__socialCard:hover .ContactSection-module__DXGP8q__socialHandle {
+  color: #fffc;
+}
+
+.ContactSection-module__DXGP8q__formActions {
+  gap: 1rem;
+  margin-top: 1rem;
+  display: flex;
+}
+
+.ContactSection-module__DXGP8q__cancelBtn {
+  color: #ffffffb3;
+  cursor: pointer;
+  background: none;
+  border: 1px solid #fff3;
+  padding: 1rem 2rem;
+  font-size: .8rem;
+  font-weight: 700;
+  transition: all .3s;
+}
+
+.ContactSection-module__DXGP8q__cancelBtn:hover {
+  color: #fff;
+  border-color: #fff;
+}
+
+.ContactSection-module__DXGP8q__madeWith {
+  color: #fff6;
+  font-size: .75rem;
+}
+
+.ContactSection-module__DXGP8q__inputGroup {
+  flex-direction: column;
+  gap: 1rem;
+  display: flex;
+}
+
+.ContactSection-module__DXGP8q__inputGroup label {
+  color: var(--text-gray);
+  letter-spacing: .2em;
+  font-size: .65rem;
+  font-weight: 900;
+}
+
+.ContactSection-module__DXGP8q__inputGroup input, .ContactSection-module__DXGP8q__inputGroup textarea {
+  color: #fff;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background: #0a0a0a66;
+  border: 1px solid #ffffff0d;
+  outline: none;
+  padding: 1.5rem;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: all .4s cubic-bezier(.16, 1, .3, 1);
+}
+
+.ContactSection-module__DXGP8q__inputGroup input:focus, .ContactSection-module__DXGP8q__inputGroup textarea:focus {
+  background: #0f0f0f99;
+  border-color: #cf06;
+  box-shadow: 0 0 30px #ccff001a;
+}
+
+.ContactSection-module__DXGP8q__submitBtn {
+  background: var(--neon-lime);
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: .25em;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  width: fit-content;
+  padding: 1.5rem 4rem;
+  font-size: .8rem;
+  font-weight: 900;
+  transition: all .4s;
+  display: inline-flex;
+}
+
+.ContactSection-module__DXGP8q__submitBtn:hover {
+  background: #fff;
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px #ffffff1a;
+}
+
+.ContactSection-module__DXGP8q__spinner {
+  animation: 1s linear infinite ContactSection-module__DXGP8q__spin;
+}
+
+@keyframes ContactSection-module__DXGP8q__spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.ContactSection-module__DXGP8q__successMsg {
+  color: var(--neon-lime);
+  font-size: .9rem;
+  font-weight: 700;
+}
+
+.ContactSection-module__DXGP8q__errorMsg {
+  color: #f44;
+  font-size: .9rem;
+  font-weight: 700;
+}
+
+.ContactSection-module__DXGP8q__infoSide {
+  flex-direction: column;
+  gap: 5rem;
+  display: flex;
+}
+
+.ContactSection-module__DXGP8q__infoLabel {
+  color: var(--text-gray);
+  letter-spacing: .2em;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  font-size: .7rem;
+  font-weight: 800;
+  display: flex;
+}
+
+.ContactSection-module__DXGP8q__infoValue {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.ContactSection-module__DXGP8q__socials {
+  color: #fff;
+  gap: 2rem;
+  display: flex;
+}
+
+.ContactSection-module__DXGP8q__socials a {
+  color: #fff;
+  transition: color .3s;
+}
+
+.ContactSection-module__DXGP8q__socials a:hover {
+  color: var(--neon-lime);
+}
+
+.ContactSection-module__DXGP8q__cautionBanner {
+  border: 1px solid var(--border-dim);
+  background: #111;
+  border-radius: 4px;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: auto;
+  padding: 1.5rem;
+  display: flex;
+}
+
+.ContactSection-module__DXGP8q__stripes {
+  background: repeating-linear-gradient(45deg, #000, #000 10px, var(--neon-lime) 10px, var(--neon-lime) 20px);
+  height: 20px;
+}
+
+.ContactSection-module__DXGP8q__cautionBanner span {
+  letter-spacing: .3em;
+  color: var(--neon-lime);
+  font-size: .65rem;
+  font-weight: 900;
+}
+
+.ContactSection-module__DXGP8q__footer {
+  border-top: 1px solid var(--border-dim);
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 4rem;
+  display: flex;
+}
+
+.ContactSection-module__DXGP8q__copy {
+  color: var(--text-gray);
+  letter-spacing: .1em;
+  font-size: .75rem;
+  font-weight: 800;
+}
+
+.ContactSection-module__DXGP8q__downloadBtn {
+  color: #fff;
+  border: 1px solid var(--border-dim);
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  cursor: pointer;
+  background: none;
+  border-radius: 4px;
+  align-items: center;
+  gap: 1rem;
+  padding: .8rem 2rem;
+  font-size: .75rem;
+  font-weight: 800;
+  transition: all .3s;
+  display: flex;
+}
+
+.ContactSection-module__DXGP8q__downloadBtn:hover {
+  border-color: #fff;
+}
+
+@media (max-width: 1000px) {
+  .ContactSection-module__DXGP8q__contactGrid {
+    grid-template-columns: 1fr;
+    gap: 5rem;
+  }
+}
+
+/*# sourceMappingURL=folio-frontend_src_components_ContactSection_module_css_bad6b30c._.single.css.map*/
