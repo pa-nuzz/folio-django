@@ -3,7 +3,6 @@ import React from "react";
 import Navbar from "@/components/Navbar";
 import Hero3D from "@/components/Hero3D";
 import AboutSection from "@/components/AboutSection";
-import AILab from "@/components/AILab";
 import ProjectsSection from "@/components/ProjectsSection";
 import GithubSection from "@/components/GithubSection";
 import MusicSection from "@/components/MusicSection";
