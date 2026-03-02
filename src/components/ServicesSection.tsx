@@ -3,95 +3,107 @@ import React, { useRef } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Code2, Palette, Bot, ArrowRight } from 'lucide-react';
+import { Code2, Database, Cpu, Globe, Layers, ArrowRight, Sparkles } from 'lucide-react';
 import styles from './ServicesSection.module.css';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const SERVICES = [
   {
-    title: "Software Engineering",
+    id: 1,
     icon: Code2,
-    tags: ["React", "Next.js", "TypeScript", "Node.js", "Django", "FastAPI", "PostgreSQL", "Redis", "Docker", "AWS", "CI/CD", "System Architecture"],
-    description: "Building robust, scalable digital foundations with modern stacks. From concept to deployment."
+    title: "Web Development",
+    description: "Full-stack applications with React, Next.js, and modern frameworks.",
+    tags: ["React", "Next.js", "TypeScript", "Node.js"],
+    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&q=80",
+    color: "#39ff14"
   },
   {
-    title: "Design",
-    icon: Palette,
-    tags: ["UX/UI", "Brand identities", "Custom icons", "Motion Design", "3D Modeling", "Interactive Prototyping", "Design Systems", "Web Graphics"],
-    description: "Crafting immersive visual experiences that resonate and engage. Design that converts."
+    id: 2,
+    icon: Database,
+    title: "Backend Systems",
+    description: "Scalable APIs and database architecture for high-performance apps.",
+    tags: ["Python", "Django", "PostgreSQL", "FastAPI"],
+    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80",
+    color: "#00ff41"
   },
   {
-    title: "Automation",
-    icon: Bot,
-    tags: ["AI Integration", "LLM Pipelines", "Workflow Automation", "Python Scripts", "Bot Development", "API Orchestration", "Data Analysis"],
-    description: "Streamlining complex processes with intelligent, automated solutions. Work smarter."
+    id: 3,
+    icon: Cpu,
+    title: "AI Integration",
+    description: "Machine learning solutions and LLM integration for smart applications.",
+    tags: ["OpenAI", "TensorFlow", "LLMs", "Automation"],
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80",
+    color: "#00d9ff"
+  },
+  {
+    id: 4,
+    icon: Globe,
+    title: "DevOps & Cloud",
+    description: "Deployment, CI/CD pipelines, and cloud infrastructure management.",
+    tags: ["Docker", "AWS", "CI/CD", "Linux"],
+    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80",
+    color: "#ff9500"
   }
 ];
 
 export default function ServicesSection() {
   const sectionRef = useRef<HTMLElement>(null);
-  const cardsRef = useRef<HTMLDivElement>(null);
 
   useGSAP(() => {
-    const cards = gsap.utils.toArray(`.${styles.card}`);
-    
-    cards.forEach((card: any, i: number) => {
-      gsap.from(card, {
-        scrollTrigger: {
-          trigger: card,
-          start: "top 85%",
-          toggleActions: "play none none reverse"
-        },
-        y: 60,
-        opacity: 0,
-        duration: 0.8,
-        delay: i * 0.15,
-        ease: "power3.out"
-      });
+    gsap.from(".services-header", {
+      scrollTrigger: { trigger: sectionRef.current, start: "top 75%" },
+      y: 60, opacity: 0, duration: 1, ease: "power3.out"
+    });
+    gsap.from(".service-card", {
+      scrollTrigger: { trigger: ".services-grid", start: "top 70%" },
+      y: 80, opacity: 0, duration: 0.8, stagger: 0.15, ease: "power3.out"
     });
   }, { scope: sectionRef });
 
   return (
-    <section id="services" ref={sectionRef} className={styles.wrapper}>
+    <section id="services" ref={sectionRef} className={styles.section}>
       <div className={styles.container}>
-        <div className={styles.header}>
-          <span className={styles.badge}>WHAT I DO</span>
-          <h2 className={styles.mainTitle}>Services</h2>
-          <p className={styles.mainSubtitle}>I have one quest. I make it count.</p>
+        <div className={`services-header ${styles.header}`}>
+          <div className={styles.badge}>
+            <Sparkles size={14} />
+            WHAT I DO
+          </div>
+          <h2 className={styles.title}>Services</h2>
+          <p className={styles.subtitle}>End-to-end development solutions for modern businesses</p>
         </div>
 
-        <div ref={cardsRef} className={styles.cardsContainer}>
-          {SERVICES.map((service, idx) => {
+        <div className={`services-grid ${styles.servicesGrid}`}>
+          {SERVICES.map((service) => {
             const IconComponent = service.icon;
             return (
-              <div key={idx} className={styles.card}>
-                <div className={styles.cardIcon}>
-                  <IconComponent size={32} />
+              <div key={service.id} className={`service-card ${styles.serviceCard}`}>
+                <div className={styles.cardImageWrapper}>
+                  <img src={service.image} alt={service.title} className={styles.cardImage} />
+                  <div className={styles.cardOverlay} style={{ background: `linear-gradient(135deg, ${service.color}20 0%, transparent 100%)` }} />
                 </div>
                 <div className={styles.cardContent}>
-                  <h3 className={styles.serviceTitle}>{service.title}</h3>
-                  <p className={styles.serviceDesc}>{service.description}</p>
-                  <div className={styles.tagCloud}>
-                    {service.tags.slice(0, 6).map((tag, tIdx) => (
-                      <span key={tIdx} className={styles.tag}>{tag}</span>
+                  <div className={styles.cardIcon} style={{ color: service.color }}>
+                    <IconComponent size={28} />
+                  </div>
+                  <h3 className={styles.cardTitle}>{service.title}</h3>
+                  <p className={styles.cardDescription}>{service.description}</p>
+                  <div className={styles.cardTags}>
+                    {service.tags.map((tag, idx) => (
+                      <span key={idx} className={styles.tag} style={{ borderColor: service.color }}>{tag}</span>
                     ))}
                   </div>
                 </div>
+                <div className={styles.cardGlow} style={{ background: `radial-gradient(circle at 50% 0%, ${service.color}30 0%, transparent 70%)` }} />
               </div>
             );
           })}
-          
-          {/* CTA Card */}
-          <div className={`${styles.card} ${styles.ctaCard}`}>
-            <div className={styles.ctaContent}>
-              <h2 className={styles.ctaText}>Ready to start your project?</h2>
-              <a href="#contact" className={styles.ctaBtn}>
-                Get in Touch
-                <ArrowRight size={18} />
-              </a>
-            </div>
-          </div>
+        </div>
+
+        <div className={styles.cta}>
+          <a href="#contact" className={styles.ctaBtn}>
+            Start a Project <ArrowRight size={18} />
+          </a>
         </div>
       </div>
     </section>

@@ -40,7 +40,7 @@ export default function AILab() {
   const [messages, setMessages] = useState<Message[]>([
     { 
       role: 'ai', 
-      content: "Well, well, well... look who decided to stop by! I'm Monk, your charming AI guide to Anuj's world. 💫 Ask me anything about this talented developer - or just say hi. I'm all ears (and code)!" 
+      content: "Well, well, well... look who decided to stop by! I'm Buff Choila, your charming AI guide to Danuzz's world. 💫 Ask me anything about this talented developer - or just say hi. I'm all ears (and code)!" 
     }
   ]);
   const [input, setInput] = useState('');
@@ -212,7 +212,7 @@ export default function AILab() {
                 <Bot size={24} />
               </div>
               <div className={styles.sidebarInfo}>
-                <div className={styles.sidebarTitle}>Monk AI</div>
+                <div className={styles.sidebarTitle}>Buff Choila</div>
                 <div className={styles.sidebarStatus}>
                   <span className={styles.statusDot}></span>
                   Online

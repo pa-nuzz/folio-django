@@ -1,14 +1,15 @@
 :root {
-  --neon-lime: #ccff00;
-  --neon-yellow: #f4ff00;
-  --bg-dark: #000000;
-  --bg-darker: #050505;
-  --bg-card: rgba(15, 15, 15, 0.8);
-  --text-gray: rgba(255, 255, 255, 0.5);
+  --neon-lime: #39ff14;
+  --neon-green: #00ff41;
+  --neon-yellow: #ccff00;
+  --bg-dark: #0a0f0a;
+  --bg-darker: #050805;
+  --bg-card: rgba(10, 20, 10, 0.8);
+  --text-gray: rgba(255, 255, 255, 0.6);
   --text-light: #E0E0E0;
-  --border-dim: rgba(255, 255, 255, 0.05);
+  --border-dim: rgba(57, 255, 20, 0.1);
   --caution-yellow: #FFD700;
-  --bg-morph: rgba(0, 0, 0, 0);
+  --bg-morph: rgba(57, 255, 20, 0.05);
   
   --font-display: 'Inter', sans-serif;
   --font-sans: 'Inter', sans-serif;
@@ -21,9 +22,8 @@
 }
 
 body {
-  background: var(--bg-dark);
-  background-image: 
-    radial-gradient(circle at 50% 50%, var(--bg-morph) 0%, transparent 100%);
+  background: linear-gradient(135deg, #0a0f0a 0%, #051005 50%, #0a150a 100%);
+  background-attachment: fixed;
   color: #fff;
   font-family: var(--font-sans);
   overflow-x: hidden;
@@ -31,7 +31,7 @@ body {
 }
 
 .text-gradient {
-  background: linear-gradient(135deg, #fff 0%, var(--neon-lime) 100%);
+  background: linear-gradient(135deg, #39ff14 0%, #00ff41 50%, #ccff00 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;

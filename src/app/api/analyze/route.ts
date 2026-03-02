@@ -13,8 +13,8 @@ const rateLimiter = new RateLimiterMemory({
   duration: 600, // 10 minutes
 });
 
-// Security: File size limit (10MB)
-const MAX_FILE_SIZE = 10 * 1024 * 1024;
+// Security: File size limit (50MB)
+const MAX_FILE_SIZE = 50 * 1024 * 1024;
 
 // Security: Allowed file types
 const ALLOWED_RESUME_TYPES = ['.pdf', '.docx', '.doc', '.txt'];

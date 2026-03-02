@@ -64,6 +64,7 @@ export default function ProjectsSection() {
 
   const sectionRef = useRef<HTMLElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -97,23 +98,24 @@ export default function ProjectsSection() {
     if (loading || !trackRef.current || !sectionRef.current) return;
 
     const track = trackRef.current;
-    // Add extra padding to ensure last item is fully visible
-    const scrollWidth = track.scrollWidth - window.innerWidth + 200; // Extra 200px padding
+    const container = containerRef.current;
+    if (!container) return;
+    
+    // Calculate scrollable width
+    const scrollWidth = track.scrollWidth - container.offsetWidth;
 
     if (scrollWidth > 0 && window.innerWidth > 768) {
-      gsap.to(track, {
-        x: -scrollWidth,
-        ease: "none",
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          pin: true,
-          scrub: 1,
-          start: "top top",
-          end: () => `+=${scrollWidth * 1.2}`, // Slightly longer scroll distance
-          anticipatePin: 1,
-          invalidateOnRefresh: true,
+      // Use container's scroll instead of page scroll
+      container.addEventListener('wheel', (e: WheelEvent) => {
+        if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) {
+          // Already horizontal scrolling
+          return;
         }
-      });
+        e.preventDefault();
+        const currentTransform = gsap.getProperty(track, 'x') as number;
+        const newX = Math.max(-scrollWidth, Math.min(0, currentTransform - e.deltaY));
+        gsap.to(track, { x: newX, duration: 0.3, ease: 'power2.out' });
+      }, { passive: false });
     }
 
     gsap.from(".section-header", {
@@ -143,7 +145,7 @@ export default function ProjectsSection() {
           <p>Loading projects...</p>
         </div>
       ) : (
-        <div className={styles.trackContainer}>
+        <div className={styles.trackContainer} ref={containerRef}>
           <div className={styles.track} ref={trackRef}>
             
             <div className={styles.introSlide}>

@@ -6,9 +6,9 @@ import styles from './ContactSection.module.css';
 // Real social links - update these with your actual links
 const SOCIAL_LINKS = {
   github: 'https://github.com/pa-nuzz',
-  linkedin: 'https://linkedin.com/in/anuj-don', // Update with your real LinkedIn
-  instagram: 'https://instagram.com/anuj.don', // Update with your real Instagram
-  email: 'mailto:anuj.paudel061@gmail.com'
+  linkedin: 'https://linkedin.com/in/danuzz',
+  instagram: 'https://instagram.com/danuzz',
+  email: 'mailto:contact@danuzz.com'
 };
 
 export default function ContactSection() {
@@ -182,7 +182,7 @@ export default function ContactSection() {
                   </div>
                   <div className={styles.socialInfo}>
                     <span className={styles.socialName}>GitHub</span>
-                    <span className={styles.socialHandle}>@pa-nuzz</span>
+                    <span className={styles.socialHandle}>GitHub</span>
                   </div>
                 </a>
                 
@@ -192,7 +192,7 @@ export default function ContactSection() {
                   </div>
                   <div className={styles.socialInfo}>
                     <span className={styles.socialName}>LinkedIn</span>
-                    <span className={styles.socialHandle}>Anuj Don</span>
+                    <span className={styles.socialHandle}>LinkedIn</span>
                   </div>
                 </a>
                 
@@ -202,7 +202,7 @@ export default function ContactSection() {
                   </div>
                   <div className={styles.socialInfo}>
                     <span className={styles.socialName}>Instagram</span>
-                    <span className={styles.socialHandle}>@anuj.don</span>
+                    <span className={styles.socialHandle}>Instagram</span>
                   </div>
                 </a>
                 
@@ -212,20 +212,70 @@ export default function ContactSection() {
                   </div>
                   <div className={styles.socialInfo}>
                     <span className={styles.socialName}>Email</span>
-                    <span className={styles.socialHandle}>anuj.paudel061@gmail.com</span>
+                    <span className={styles.socialHandle}>Email</span>
                   </div>
                 </a>
               </div>
             </div>
-          </div>
+          )}
         </div>
 
-        {/* Footer */}
-        <footer className={styles.footer}>
-          <span className={styles.copy}> 2026 Anuj Don. All rights reserved.</span>
-          <span className={styles.madeWith}>Made with passion in Nepal</span>
-        </footer>
+        {/* Right: Social Links */}
+        <div className={styles.infoSide}>
+          <div className={styles.socialSection}>
+            <h3 className={styles.socialTitle}>Connect With Me</h3>
+            <p className={styles.socialDesc}>Follow me on social media or reach out directly.</p>
+            
+            <div className={styles.socialGrid}>
+              <a href={SOCIAL_LINKS.github} target="_blank" rel="noopener noreferrer" className={styles.socialCard}>
+                <div className={styles.socialIcon}>
+                  <Github size={28} />
+                </div>
+                <div className={styles.socialInfo}>
+                  <span className={styles.socialName}>GitHub</span>
+                  <span className={styles.socialHandle}>GitHub</span>
+                </div>
+              </a>
+              
+              <a href={SOCIAL_LINKS.linkedin} target="_blank" rel="noopener noreferrer" className={styles.socialCard}>
+                <div className={styles.socialIcon}>
+                  <Linkedin size={28} />
+                </div>
+                <div className={styles.socialInfo}>
+                  <span className={styles.socialName}>LinkedIn</span>
+                  <span className={styles.socialHandle}>LinkedIn</span>
+                </div>
+              </a>
+              
+              <a href={SOCIAL_LINKS.instagram} target="_blank" rel="noopener noreferrer" className={styles.socialCard}>
+                <div className={styles.socialIcon}>
+                  <Instagram size={28} />
+                </div>
+                <div className={styles.socialInfo}>
+                  <span className={styles.socialName}>Instagram</span>
+                  <span className={styles.socialHandle}>Instagram</span>
+                </div>
+              </a>
+              
+              <a href={SOCIAL_LINKS.email} className={styles.socialCard}>
+                <div className={styles.socialIcon}>
+                  <Mail size={28} />
+                </div>
+                <div className={styles.socialInfo}>
+                  <span className={styles.socialName}>Email</span>
+                  <span className={styles.socialHandle}>Email</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
-    </section>
-  );
-}
+
+      {/* Footer */}
+      <footer className={styles.footer}>
+        <span className={styles.copy}> 2026 Danuzz. All rights reserved.</span>
+        <span className={styles.madeWith}>Made with passion in Nepal</span>
+      </footer>
+    </div>
+  </section>
+);

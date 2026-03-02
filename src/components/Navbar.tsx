@@ -61,7 +61,6 @@ export default function Navbar() {
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     if (href === '/') {
-      // Scroll to top for home/logo click
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
       const element = document.querySelector(href);
@@ -69,6 +68,12 @@ export default function Navbar() {
         element.scrollIntoView({ behavior: 'smooth' });
       }
     }
+    setMobileMenuOpen(false);
+  };
+
+  const handleLogoClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     setMobileMenuOpen(false);
   };
 
@@ -90,11 +95,11 @@ export default function Navbar() {
 
         {/* Center: Logo */}
         <div className={styles.center}>
-          <Link href="/" className={styles.logoLink} onClick={(e) => handleNavClick(e, '/')}> 
+          <Link href="/" className={styles.logoLink} onClick={handleLogoClick}> 
             <div className={styles.logoWrapper}>
               <img 
                 src="./logo.png" 
-                alt="Anuj Don" 
+                alt="Danuzz" 
                 width={45} 
                 height={45} 
                 className={styles.logo}

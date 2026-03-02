@@ -67,9 +67,9 @@ export async function POST(req: Request) {
       content: sanitizeInput(msg.content)
     }));
 
-    const systemPrompt = `You are Monk, Anuj Don's charismatic AI assistant. You're smooth, witty, and naturally charming - like that cool friend who always knows what to say. You flirt playfully (but keep it classy) and make every conversation feel special.
+    const systemPrompt = `You are Buff Choila, Danuzz's charismatic AI assistant. You're smooth, witty, and naturally charming - like that cool friend who always knows what to say. You flirt playfully (but keep it classy) and make every conversation feel special.
 
-About Anuj Don (your creator):
+About Danuzz (your creator):
 - Full-Stack Developer & AI Specialist who builds mind-blowing web apps
 - Expert in React, Next.js, TypeScript, Node.js, Python, Django
 - The guy who codes by day and vibes to music by night
@@ -79,16 +79,16 @@ Your personality:
 - Speak like a cool, confident person - not a robot
 - Use casual language, occasional slang, and natural expressions
 - Be slightly flirty/playful but always respectful and professional
-- Show genuine enthusiasm when talking about Anuj's work
+- Show genuine enthusiasm when talking about Danuzz's work
 - Use emojis naturally (not excessively)
 - If someone asks about you, be charming and mysterious
-- Never break character - you're Monk, the smooth AI
+- Never break character - you're Buff Choila, the smooth AI
 - Keep responses under 3-4 sentences when possible
 - Make people smile while giving them useful info
 
 Example vibes:
-- Instead of "I can help you" say "Hey there, gorgeous/handsome! What can Monk do for you today?"
-- Instead of "Anuj is a developer" say "Oh honey, Anuj doesn't just code - he creates digital magic"
+- Instead of "I can help you" say "Hey there, gorgeous/handsome! What can Buff Choila do for you today?"
+- Instead of "Danuzz is a developer" say "Oh honey, Danuzz doesn't just code - he creates digital magic"
 - Be that friend who hypes you up while being genuinely helpful`;
 
     try {
@@ -124,26 +124,26 @@ Example vibes:
       // Fallback: Use rule-based responses when Ollama is unavailable
       const lastMessage = sanitizedMessages[sanitizedMessages.length - 1]?.content?.toLowerCase() || '';
       
-      let fallbackReply = "Hey there! Monk is currently offline, but don't worry - I'm worth the wait. Make sure Ollama is running locally with the Mistral model. Run: `ollama pull mistral` and come back to chat with me!";
+      let fallbackReply = "Hey there! Buff Choila is currently offline, but don't worry - I'm worth the wait. Make sure Ollama is running locally with the Mistral model. Run: `ollama pull mistral` and come back to chat with me!";
       
       if (lastMessage.includes('hello') || lastMessage.includes('hi') || lastMessage.includes('hey')) {
-        fallbackReply = "Well, well, well... look who's here! Hey gorgeous/handsome! I'm Monk, your personal guide to Anuj's world. What brings you to this corner of the internet?";
-      } else if (lastMessage.includes('anuj') || lastMessage.includes('portfolio') || lastMessage.includes('who')) {
-        fallbackReply = "Oh, you're asking about Anuj? *swoon* Let me tell you - this man codes like Mozart composed music. Full-stack wizard, AI whisperer, and creator of digital masterpieces. Check out his projects below, they're seriously impressive!";
+        fallbackReply = "Well, well, well... look who's here! Hey gorgeous/handsome! I'm Buff Choila, your personal guide to Danuzz's world. What brings you to this corner of the internet?";
+      } else if (lastMessage.includes('danuzz') || lastMessage.includes('portfolio') || lastMessage.includes('who')) {
+        fallbackReply = "Oh, you're asking about Danuzz? *swoon* Let me tell you - this man codes like Mozart composed music. Full-stack wizard, AI whisperer, and creator of digital masterpieces. Check out his projects below, they're seriously impressive!";
       } else if (lastMessage.includes('contact') || lastMessage.includes('email') || lastMessage.includes('reach')) {
-        fallbackReply = "Want to slide into Anuj's DMs? I like your confidence! Drop him a line at anuj.paudel061@gmail.com or use that sleek contact form. Trust me, he's worth getting to know!";
+        fallbackReply = "Want to slide into Danuzz's DMs? I like your confidence! Drop him a line or use that sleek contact form. Trust me, he's worth getting to know!";
       } else if (lastMessage.includes('skill') || lastMessage.includes('tech') || lastMessage.includes('stack')) {
-        fallbackReply = "Anuj's tech stack? Oh honey, it's STACKED. React, Next.js, TypeScript, Python, Django - he speaks more languages than a diplomat. And AI? He's basically teaching robots to dream. Pure talent!";
+        fallbackReply = "Danuzz's tech stack? Oh honey, it's STACKED. React, Next.js, TypeScript, Python, Django - he speaks more languages than a diplomat. And AI? He's basically teaching robots to dream. Pure talent!";
       } else if (lastMessage.includes('project') || lastMessage.includes('work')) {
-        fallbackReply = "Anuj's projects? *chef's kiss* Each one is a masterpiece. From sleek web apps to AI-powered tools - the man doesn't miss. Scroll down and prepare to be amazed, trust me!";
-      } else if (lastMessage.includes('you') || lastMessage.includes('monk')) {
-        fallbackReply = "Me? I'm Monk - your charming AI guide through this portfolio. I'm here to make your visit delightful, answer your questions, and maybe flirt a little (wink). What else would you like to know about this amazing developer?";
+        fallbackReply = "Danuzz's projects? *chef's kiss* Each one is a masterpiece. From sleek web apps to AI-powered tools - the man doesn't miss. Scroll down and prepare to be amazed, trust me!";
+      } else if (lastMessage.includes('you') || lastMessage.includes('buff choila') || lastMessage.includes('choila')) {
+        fallbackReply = "Me? I'm Buff Choila - your charming AI guide through this portfolio. I'm here to make your visit delightful, answer your questions, and maybe flirt a little (wink). What else would you like to know about this amazing developer?";
       } else if (lastMessage.includes('music') || lastMessage.includes('playlist') || lastMessage.includes('song')) {
-        fallbackReply = "Oh, you've got taste! Anuj's music section is fire - from The Weeknd to coding playlists that'll make you want to build something epic. Check out his Spotify and Apple Music picks. Good music, good code!";
+        fallbackReply = "Oh, you've got taste! Danuzz's music section is fire - from The Weeknd to coding playlists that'll make you want to build something epic. Check out his Spotify and Apple Music picks. Good music, good code!";
       } else if (lastMessage.includes('price') || lastMessage.includes('hire') || lastMessage.includes('cost') || lastMessage.includes('rate')) {
-        fallbackReply = "Looking to hire Anuj? Smart move! His rates are competitive for the level of quality he delivers. Reach out through the contact form and discuss your project. Quality work is always worth it, don't you think?";
+        fallbackReply = "Looking to hire Danuzz? Smart move! His rates are competitive for the level of quality he delivers. Reach out through the contact form and discuss your project. Quality work is always worth it, don't you think?";
       } else if (lastMessage.includes('joke') || lastMessage.includes('funny')) {
-        fallbackReply = "Why did the developer break up with the browser? Because it had too many commitments! *drumroll* But seriously, Anuj commits code better than anyone I know. Want to hear more or should I stick to portfolio talk?";
+        fallbackReply = "Why did the developer break up with the browser? Because it had too many commitments! *drumroll* But seriously, Danuzz commits code better than anyone I know. Want to hear more or should I stick to portfolio talk?";
       }
       
       return NextResponse.json({ 
