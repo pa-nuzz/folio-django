@@ -1,7 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { Music, Zap, Menu, X } from 'lucide-react';
 import styles from './Navbar.module.css';
 
@@ -91,15 +90,14 @@ export default function Navbar() {
 
         {/* Center: Logo */}
         <div className={styles.center}>
-          <Link href="/" className={styles.logoLink} onClick={(e) => handleNavClick(e, '/')}>
+          <Link href="/" className={styles.logoLink} onClick={(e) => handleNavClick(e, '/')}> 
             <div className={styles.logoWrapper}>
-              <Image 
+              <img 
                 src="/logo.png" 
                 alt="Anuj Don" 
                 width={45} 
                 height={45} 
                 className={styles.logo}
-                priority
               />
               <div className={styles.logoGlow} />
             </div>
