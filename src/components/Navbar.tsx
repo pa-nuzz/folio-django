@@ -93,7 +93,7 @@ export default function Navbar() {
           <Link href="/" className={styles.logoLink} onClick={(e) => handleNavClick(e, '/')}> 
             <div className={styles.logoWrapper}>
               <img 
-                src="/logo.png" 
+                src="./logo.png" 
                 alt="Anuj Don" 
                 width={45} 
                 height={45} 

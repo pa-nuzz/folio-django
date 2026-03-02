@@ -1,6 +1,5 @@
 var R=require("../../../chunks/[turbopack]_runtime.js")("server/app/api/analyze/route.js")
 R.c("server/chunks/d16e2_next_7ac60c5a._.js")
-R.c("server/chunks/d16e2_openai_8db0bdf2._.js")
 R.c("server/chunks/d16e2_underscore_modules_a8baecc2._.js")
 R.c("server/chunks/d16e2_bluebird_js_release_1c71137c._.js")
 R.c("server/chunks/d16e2_mammoth_lib_b1185a1c._.js")

@@ -21,30 +21,25 @@ export default function ContactSection() {
     e.preventDefault();
     setStatus('loading');
     
-    try {
-      const res = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData)
-      });
-      
-      const data = await res.json();
-      if (res.ok) {
-        setStatus('success');
-        setStatusMsg(data.message);
-        setFormData({ name: '', email: '', message: '' });
-        setTimeout(() => {
-          setStatus('idle');
-          setShowForm(false);
-        }, 3000);
-      } else {
-        setStatus('error');
-        setStatusMsg(data.error || 'Failed to send message.');
-      }
-    } catch {
-      setStatus('error');
-      setStatusMsg('Connection error. Please try again.');
-    }
+    // Simulate form submission without backend
+    await new Promise(resolve => setTimeout(resolve, 1500));
+    
+    // Log the message to console (for demo purposes)
+    console.log('Contact Form Submission:', {
+      name: formData.name,
+      email: formData.email,
+      message: formData.message,
+      timestamp: new Date().toISOString()
+    });
+    
+    setStatus('success');
+    setStatusMsg('Message received! I\'ll get back to you soon.');
+    setFormData({ name: '', email: '', message: '' });
+    
+    setTimeout(() => {
+      setStatus('idle');
+      setShowForm(false);
+    }, 3000);
   };
 
   const openForm = () => {

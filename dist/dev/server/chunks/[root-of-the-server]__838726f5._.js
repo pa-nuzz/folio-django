@@ -141,8 +141,6 @@ __turbopack_context__.s([
     ()=>dynamic
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/folio-frontend/node_modules/next/server.js [app-route] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$openai$2f$index$2e$mjs__$5b$app$2d$route$5d$__$28$ecmascript$29$__$3c$locals$3e$__ = __turbopack_context__.i("[project]/folio-frontend/node_modules/openai/index.mjs [app-route] (ecmascript) <locals>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$openai$2f$client$2e$mjs__$5b$app$2d$route$5d$__$28$ecmascript$29$__$3c$export__OpenAI__as__default$3e$__ = __turbopack_context__.i("[project]/folio-frontend/node_modules/openai/client.mjs [app-route] (ecmascript) <export OpenAI as default>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$mammoth$2f$lib$2f$index$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/folio-frontend/node_modules/mammoth/lib/index.js [app-route] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$tesseract$2e$js$2f$src$2f$index$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/folio-frontend/node_modules/tesseract.js/src/index.js [app-route] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$rate$2d$limiter$2d$flexible$2f$index$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/folio-frontend/node_modules/rate-limiter-flexible/index.js [app-route] (ecmascript)");
@@ -150,12 +148,11 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_mo
 ;
 ;
 ;
-;
 const dynamic = 'force-static';
-// Security: Rate limiter - 5 requests per 10 minutes per IP
+// Security: Rate limiter - 10 requests per 10 minutes per IP (higher for local Ollama)
 const rateLimiter = new __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$rate$2d$limiter$2d$flexible$2f$index$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["RateLimiterMemory"]({
     keyPrefix: 'analyze_api',
-    points: 5,
+    points: 10,
     duration: 600
 });
 // Security: File size limit (10MB)
@@ -173,15 +170,52 @@ const ALLOWED_IMAGE_TYPES = [
     'image/jpg',
     'image/webp'
 ];
-const openai = new __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$openai$2f$client$2e$mjs__$5b$app$2d$route$5d$__$28$ecmascript$29$__$3c$export__OpenAI__as__default$3e$__["default"]({
-    apiKey: process.env.OPENAI_API_KEY
-});
+// Ollama API endpoint - runs locally for unlimited free AI
+const OLLAMA_URL = process.env.OLLAMA_URL || 'http://localhost:11434';
 // Use require for pdf-parse (CommonJS module)
 let pdfParse;
 try {
     pdfParse = __turbopack_context__.r("[project]/folio-frontend/node_modules/pdf-parse/dist/pdf-parse/cjs/index.cjs [app-route] (ecmascript)");
 } catch (e) {
     console.warn('pdf-parse not available');
+}
+// Helper function to call Ollama
+async function callOllama(systemPrompt, userContent) {
+    try {
+        const response = await fetch(`${OLLAMA_URL}/api/chat`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                model: 'mistral',
+                messages: [
+                    {
+                        role: 'system',
+                        content: systemPrompt
+                    },
+                    {
+                        role: 'user',
+                        content: userContent
+                    }
+                ],
+                stream: false,
+                options: {
+                    temperature: 0.7,
+                    num_predict: 800
+                }
+            })
+        });
+        if (!response.ok) {
+            throw new Error(`Ollama API error: ${response.status}`);
+        }
+        const data = await response.json();
+        return data.message?.content || 'Analysis unavailable';
+    } catch (error) {
+        console.error('Ollama call failed:', error);
+        // Return fallback analysis
+        return 'AI analysis unavailable. Ollama may not be running. To use this feature, install Ollama locally and run: ollama pull mistral';
+    }
 }
 async function POST(req) {
     // Security: Rate limiting check
@@ -259,23 +293,8 @@ async function POST(req) {
                 }
                 // Security: Limit text length sent to API
                 const limitedText = extractedText.substring(0, 4000);
-                // Use OpenAI to analyze the resume
-                const completion = await openai.chat.completions.create({
-                    model: 'gpt-3.5-turbo',
-                    messages: [
-                        {
-                            role: 'system',
-                            content: `You are an expert resume analyzer. Provide concise, actionable feedback.`
-                        },
-                        {
-                            role: 'user',
-                            content: `Analyze this resume:\n\n${limitedText}`
-                        }
-                    ],
-                    temperature: 0.7,
-                    max_tokens: 800
-                });
-                analysisResult = completion.choices[0]?.message?.content || 'Analysis unavailable';
+                // Use Ollama to analyze the resume
+                analysisResult = await callOllama('You are an expert resume analyzer. Provide concise, actionable feedback on strengths, improvements, and recommendations. Format with bullet points.', `Analyze this resume:\n\n${limitedText}`);
             } else if (type === 'ocr') {
                 // Security: Validate image file type
                 if (!ALLOWED_IMAGE_TYPES.includes(file.type)) {
@@ -299,23 +318,8 @@ async function POST(req) {
                 }
                 // Security: Limit text length
                 const limitedText = extractedText.substring(0, 3000);
-                // Use OpenAI to analyze the extracted text
-                const completion = await openai.chat.completions.create({
-                    model: 'gpt-3.5-turbo',
-                    messages: [
-                        {
-                            role: 'system',
-                            content: 'Analyze OCR extracted text briefly.'
-                        },
-                        {
-                            role: 'user',
-                            content: `Text: ${limitedText}`
-                        }
-                    ],
-                    temperature: 0.5,
-                    max_tokens: 500
-                });
-                analysisResult = completion.choices[0]?.message?.content || extractedText;
+                // Use Ollama to analyze the extracted text
+                analysisResult = await callOllama('Analyze OCR extracted text briefly. Summarize what was found and any key insights.', `Text: ${limitedText}`);
             }
             return __TURBOPACK__imported__module__$5b$project$5d2f$folio$2d$frontend$2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["NextResponse"].json({
                 result: analysisResult,

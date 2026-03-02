@@ -97,7 +97,8 @@ export default function ProjectsSection() {
     if (loading || !trackRef.current || !sectionRef.current) return;
 
     const track = trackRef.current;
-    const scrollWidth = track.scrollWidth - window.innerWidth;
+    // Add extra padding to ensure last item is fully visible
+    const scrollWidth = track.scrollWidth - window.innerWidth + 200; // Extra 200px padding
 
     if (scrollWidth > 0 && window.innerWidth > 768) {
       gsap.to(track, {
@@ -108,7 +109,7 @@ export default function ProjectsSection() {
           pin: true,
           scrub: 1,
           start: "top top",
-          end: () => `+=${scrollWidth}`,
+          end: () => `+=${scrollWidth * 1.2}`, // Slightly longer scroll distance
           anticipatePin: 1,
           invalidateOnRefresh: true,
         }

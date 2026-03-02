@@ -2,6 +2,7 @@
 import React from "react";
 import Navbar from "@/components/Navbar";
 import Hero3D from "@/components/Hero3D";
+import AboutSection from "@/components/AboutSection";
 import AILab from "@/components/AILab";
 import ProjectsSection from "@/components/ProjectsSection";
 import GithubSection from "@/components/GithubSection";
@@ -37,7 +38,7 @@ export default function Home() {
       <div className="grain-overlay pointer-events-none fixed inset-0 z-50 opacity-[0.04] mix-blend-overlay" />
       <Navbar />
       <Hero3D />
-      <AILab />
+      <AboutSection />
       <ProjectsSection />
       <GithubSection />
       <ServicesSection />
